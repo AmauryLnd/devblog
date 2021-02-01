@@ -2727,11 +2727,15 @@ ip link delete flannel.1
     <ul class="related-ul">
         
         <li>
-          <a href="https://gerkindev.github.io/devblog/walkthroughs/kubernetes/07-authentication/" class="related__link">Setup cluster&#39;s authentication</a>
+          <a href="https://gerkindev.github.io/devblog/walkthroughs/kubernetes/03-router/" class="related__link">Setup the cluster&#39;s internal router</a>
         </li>
         
         <li>
-          <a href="https://gerkindev.github.io/devblog/walkthroughs/kubernetes/03-router/" class="related__link">Setup the cluster&#39;s internal router</a>
+          <a href="https://gerkindev.github.io/devblog/walkthroughs/kubernetes/01-audit-log/" class="related__link">Setup the cluster&#39;s Audit Log</a>
+        </li>
+        
+        <li>
+          <a href="https://gerkindev.github.io/devblog/walkthroughs/kubernetes/00-vpn/" class="related__link">Setup the cluster&#39;s VPN</a>
         </li>
         
         <li>
@@ -2739,11 +2743,7 @@ ip link delete flannel.1
         </li>
         
         <li>
-          <a href="https://gerkindev.github.io/devblog/walkthroughs/kubernetes/05-storage/" class="related__link">Make things persistent</a>
-        </li>
-        
-        <li>
-          <a href="https://gerkindev.github.io/devblog/walkthroughs/kubernetes/00-vpn/" class="related__link">Setup the cluster&#39;s VPN</a>
+          <a href="https://gerkindev.github.io/devblog/walkthroughs/kubernetes/06-monitoring/" class="related__link">Monitoring: See what is going on</a>
         </li>
         
     </ul>
@@ -2751,25 +2751,60 @@ ip link delete flannel.1
   </section>
       
   
-    <div id="comments-gitment"></div>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/default.min.css" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/gitment.browser.min.js" crossorigin="anonymous"></script>
-<script type="text/javascript">
-  var gitment = new Gitment({
-    id: '2020-11-16 02:35:47 \u002b0100 \u002b0100',
-    title: 'Kickstart the cluster',
-    link: decodeURI(location.href),
-    desc: 'Configure network requirements Required by  flannel config .\n1 2 3 4 5 6  if [ \u0026#34;$(cat \/proc\/sys\/net\/bridge\/bridge-nf-call-iptables)\u0026#34; = \u0026#34;1\u0026#34; ]; then echo \u0026#34;OK\u0026#34; else echo \u0026#34;Setting bridged mode\u0026#34; sysctl net.bridge.bridge-nf-call-iptables=1 fi   Create the cluster config file   References   How to set bind address by config file: https:\/\/stackoverflow.com\/a\/60391611    We are now going to configure the cluster. For the sake of traceability, this configuration won\u0026rsquo;t be done via CLI flags, but via  a configuration file .',
-    owner: 'GerkinDev',
-    repo: 'devblog',
-    oauth: {
-      client_id: '513b359e4303b14488f0',
-      client_secret: 'ccc9932e20b96a9937dad65cb60a6873de25555a'
+    <div id="utterances"></div>
+<noscript>Please enable JavaScript to view the <a href="https://github.com/utterance">comments powered by utterances.</a></noscript>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    function checkTheme(local, base) {
+      var currentTheme = local || base;
+
+      if (currentTheme === "dark") {
+        return "photon-dark";
+      } else if (currentTheme === "hacker") {
+        return "photon-dark";
+      } else if (currentTheme === "kimbie") {
+        return "github-dark-orange";
+      } else {
+        return "github-light";
+      }
+    }
+
+    try {
+      
+      var owner = JSON.parse("\"GerkinDev\"");
+      
+      var repo = JSON.parse("\"devblog\"");
+      
+      var baseTheme = JSON.parse("\"dark\"");
+      var localTheme = localStorage.getItem('theme');
+      var utterTheme = checkTheme(localTheme, baseTheme);
+      var myScript = document.createElement('script');
+      myScript.setAttribute('src', 'https://utteranc.es/client.js');
+      myScript.setAttribute('repo', `${owner}/${repo}`);
+      myScript.setAttribute('issue-term', 'pathname');
+      myScript.setAttribute('theme', utterTheme);
+      myScript.setAttribute('label', 'utterances-comment');
+      myScript.setAttribute('crossorigin', 'anonymous');
+      myScript.setAttribute('async', '');
+      myScript.onload = function() {
+      }
+
+      
+
+      document.getElementById('utterances').appendChild(myScript);
+    } catch (err) {
+      console.log(err);
     }
   });
-  gitment.render('comments-gitment');
 </script>
-<noscript>Please enable JavaScript to view the <a href="https://github.com/imsun/gitment">comments powered by gitment.</a></noscript>
+
+<div id="comments-fallback" class="viaemail">
+    <div class="utterances__message">
+        
+        <a href="https://github.com/GerkinDev/devblog/issues/" target="_blank" rel="noreferrer">&nbsp;</a>
+    </div>
+</div>
+
   
 
       <div class="modal micromodal-slide" id="modal" aria-hidden="true">

@@ -2231,23 +2231,23 @@ git commit -m <span class="s2">&#34;Make things persistent\n\nFollowing guide @ 
     <ul class="related-ul">
         
         <li>
-          <a href="https://gerkindev.github.io/devblog/walkthroughs/kubernetes/04-reverse-proxy/" class="related__link">Make services reachable from the world</a>
-        </li>
-        
-        <li>
           <a href="https://gerkindev.github.io/devblog/walkthroughs/kubernetes/02-cluster/" class="related__link">Kickstart the cluster</a>
         </li>
         
         <li>
-          <a href="https://gerkindev.github.io/devblog/walkthroughs/kubernetes/07-authentication/" class="related__link">Setup cluster&#39;s authentication</a>
-        </li>
-        
-        <li>
-          <a href="https://gerkindev.github.io/devblog/walkthroughs/kubernetes/00-vpn/" class="related__link">Setup the cluster&#39;s VPN</a>
+          <a href="https://gerkindev.github.io/devblog/walkthroughs/kubernetes/01-audit-log/" class="related__link">Setup the cluster&#39;s Audit Log</a>
         </li>
         
         <li>
           <a href="https://gerkindev.github.io/devblog/walkthroughs/kubernetes/08-kubernetes-user-management/" class="related__link">Administrate the cluster with authentication</a>
+        </li>
+        
+        <li>
+          <a href="https://gerkindev.github.io/devblog/walkthroughs/kubernetes/03-router/" class="related__link">Setup the cluster&#39;s internal router</a>
+        </li>
+        
+        <li>
+          <a href="https://gerkindev.github.io/devblog/walkthroughs/kubernetes/04-reverse-proxy/" class="related__link">Make services reachable from the world</a>
         </li>
         
     </ul>
@@ -2255,25 +2255,60 @@ git commit -m <span class="s2">&#34;Make things persistent\n\nFollowing guide @ 
   </section>
       
   
-    <div id="comments-gitment"></div>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/default.min.css" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/gitment.browser.min.js" crossorigin="anonymous"></script>
-<script type="text/javascript">
-  var gitment = new Gitment({
-    id: '2020-11-16 02:35:47 \u002b0100 \u002b0100',
-    title: 'Make things persistent',
-    link: decodeURI(location.href),
-    desc: 'References   📖 persistent volume https:\/\/www.youtube.com\/watch?v=0swOh5C3OVM    As you may know, docker (and thus, kubernetes) does not persist anything by default. That means that everytime you restart a pod (container), it is in the exact same state as it was at its first execution, except for the mount points. Those mount points are real hard drive directories injected into your pod. Some apps we\u0026rsquo;ll setup later will require to persist data, and, more generally, when you\u0026rsquo;ll run real applications on your own, they will probably use a database or something.',
-    owner: 'GerkinDev',
-    repo: 'devblog',
-    oauth: {
-      client_id: '513b359e4303b14488f0',
-      client_secret: 'ccc9932e20b96a9937dad65cb60a6873de25555a'
+    <div id="utterances"></div>
+<noscript>Please enable JavaScript to view the <a href="https://github.com/utterance">comments powered by utterances.</a></noscript>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    function checkTheme(local, base) {
+      var currentTheme = local || base;
+
+      if (currentTheme === "dark") {
+        return "photon-dark";
+      } else if (currentTheme === "hacker") {
+        return "photon-dark";
+      } else if (currentTheme === "kimbie") {
+        return "github-dark-orange";
+      } else {
+        return "github-light";
+      }
+    }
+
+    try {
+      
+      var owner = JSON.parse("\"GerkinDev\"");
+      
+      var repo = JSON.parse("\"devblog\"");
+      
+      var baseTheme = JSON.parse("\"dark\"");
+      var localTheme = localStorage.getItem('theme');
+      var utterTheme = checkTheme(localTheme, baseTheme);
+      var myScript = document.createElement('script');
+      myScript.setAttribute('src', 'https://utteranc.es/client.js');
+      myScript.setAttribute('repo', `${owner}/${repo}`);
+      myScript.setAttribute('issue-term', 'pathname');
+      myScript.setAttribute('theme', utterTheme);
+      myScript.setAttribute('label', 'utterances-comment');
+      myScript.setAttribute('crossorigin', 'anonymous');
+      myScript.setAttribute('async', '');
+      myScript.onload = function() {
+      }
+
+      
+
+      document.getElementById('utterances').appendChild(myScript);
+    } catch (err) {
+      console.log(err);
     }
   });
-  gitment.render('comments-gitment');
 </script>
-<noscript>Please enable JavaScript to view the <a href="https://github.com/imsun/gitment">comments powered by gitment.</a></noscript>
+
+<div id="comments-fallback" class="viaemail">
+    <div class="utterances__message">
+        
+        <a href="https://github.com/GerkinDev/devblog/issues/" target="_blank" rel="noreferrer">&nbsp;</a>
+    </div>
+</div>
+
   
 
       <div class="modal micromodal-slide" id="modal" aria-hidden="true">
