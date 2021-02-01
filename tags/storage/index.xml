@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>Storage on GerkinDev Devblog</title>
+    <link>https://gerkindev.github.io/devblog/tags/storage/</link>
+    <description>Recent content in Storage on GerkinDev Devblog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>©{year}, All Rights Reserved</copyright>
+    <lastBuildDate>Mon, 16 Nov 2020 02:35:47 +0100</lastBuildDate>
+    
+        <atom:link href="https://gerkindev.github.io/devblog/tags/storage/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+
+      
+      <item>
+        <title>Make things persistent</title>
+        <link>https://gerkindev.github.io/devblog/walkthroughs/kubernetes/05-storage/</link>
+        <pubDate>Mon, 16 Nov 2020 02:35:47 +0100</pubDate>
+        
+        <atom:modified>Mon, 01 Feb 2021 16:42:59 +0100</atom:modified>
+        <guid>https://gerkindev.github.io/devblog/walkthroughs/kubernetes/05-storage/</guid>
+        <description>References   📖 persistent volume https://www.youtube.com/watch?v=0swOh5C3OVM    As you may know, docker (and thus, kubernetes) does not persist anything by default. That means that everytime you restart a pod (container), it is in the exact same state as it was at its first execution, except for the mount points. Those mount points are real hard drive directories injected into your pod. Some apps we&amp;rsquo;ll setup later will require to persist data, and, more generally, when you&amp;rsquo;ll run real applications on your own, they will probably use a database or something.</description>
+        
+        <dc:creator>GerkinDev</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>Kubernetes</category>
+            
+          
+            
+              <category>Sysadmin</category>
+            
+          
+            
+              <category>DevOps</category>
+            
+          
+            
+              <category>Storage</category>
+            
+          
+        
+        
+          
+            
+              <category>Kubernetes</category>
+            
+          
+        
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>

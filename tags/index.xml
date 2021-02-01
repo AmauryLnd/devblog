@@ -12,7 +12,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>©{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Wed, 18 Nov 2020 00:22:31 +0100</lastBuildDate>
+    <lastBuildDate>Sun, 22 Nov 2020 04:03:47 +0100</lastBuildDate>
     
         <atom:link href="https://gerkindev.github.io/devblog/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -23,10 +23,154 @@
       <item>
         <title>kubernetes</title>
         <link>https://gerkindev.github.io/devblog/tags/kubernetes/</link>
-        <pubDate>Wed, 18 Nov 2020 00:22:31 +0100</pubDate>
+        <pubDate>Sun, 22 Nov 2020 04:03:47 +0100</pubDate>
         
         
         <guid>https://gerkindev.github.io/devblog/tags/kubernetes/</guid>
+        <description></description>
+        
+        <dc:creator>GerkinDev</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Sysadmin</title>
+        <link>https://gerkindev.github.io/devblog/tags/sysadmin/</link>
+        <pubDate>Sun, 22 Nov 2020 04:03:47 +0100</pubDate>
+        
+        
+        <guid>https://gerkindev.github.io/devblog/tags/sysadmin/</guid>
+        <description></description>
+        
+        <dc:creator>GerkinDev</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Authentication</title>
+        <link>https://gerkindev.github.io/devblog/tags/authentication/</link>
+        <pubDate>Mon, 16 Nov 2020 02:35:47 +0100</pubDate>
+        
+        
+        <guid>https://gerkindev.github.io/devblog/tags/authentication/</guid>
+        <description></description>
+        
+        <dc:creator>GerkinDev</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>DevOps</title>
+        <link>https://gerkindev.github.io/devblog/tags/devops/</link>
+        <pubDate>Mon, 16 Nov 2020 02:35:47 +0100</pubDate>
+        
+        
+        <guid>https://gerkindev.github.io/devblog/tags/devops/</guid>
+        <description></description>
+        
+        <dc:creator>GerkinDev</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Monitoring</title>
+        <link>https://gerkindev.github.io/devblog/tags/monitoring/</link>
+        <pubDate>Mon, 16 Nov 2020 02:35:47 +0100</pubDate>
+        
+        
+        <guid>https://gerkindev.github.io/devblog/tags/monitoring/</guid>
+        <description></description>
+        
+        <dc:creator>GerkinDev</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Networking</title>
+        <link>https://gerkindev.github.io/devblog/tags/networking/</link>
+        <pubDate>Mon, 16 Nov 2020 02:35:47 +0100</pubDate>
+        
+        
+        <guid>https://gerkindev.github.io/devblog/tags/networking/</guid>
+        <description></description>
+        
+        <dc:creator>GerkinDev</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Security</title>
+        <link>https://gerkindev.github.io/devblog/tags/security/</link>
+        <pubDate>Mon, 16 Nov 2020 02:35:47 +0100</pubDate>
+        
+        
+        <guid>https://gerkindev.github.io/devblog/tags/security/</guid>
+        <description></description>
+        
+        <dc:creator>GerkinDev</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Storage</title>
+        <link>https://gerkindev.github.io/devblog/tags/storage/</link>
+        <pubDate>Mon, 16 Nov 2020 02:35:47 +0100</pubDate>
+        
+        
+        <guid>https://gerkindev.github.io/devblog/tags/storage/</guid>
+        <description></description>
+        
+        <dc:creator>GerkinDev</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Web service</title>
+        <link>https://gerkindev.github.io/devblog/tags/web-service/</link>
+        <pubDate>Mon, 16 Nov 2020 02:35:47 +0100</pubDate>
+        
+        
+        <guid>https://gerkindev.github.io/devblog/tags/web-service/</guid>
         <description></description>
         
         <dc:creator>GerkinDev</dc:creator>
