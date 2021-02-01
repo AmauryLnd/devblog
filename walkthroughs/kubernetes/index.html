@@ -1707,7 +1707,7 @@
   
   
   
-    via commit&nbsp;<a href="https://github.com/GerkinDev/devblog/commit/91d68d003e86dbc3919c8a68720d77d5481745d4" target="_blank"><code>91d68d0</code> (<em>Publish bare-metal kubernetes cluster walkthrough</em>) by GerkinDev</a>
+    via commit&nbsp;<a href="https://github.com/GerkinDev/devblog/commit/7bfc033ea6400fd67869ce2c582fc4fcbba7073e" target="_blank"><code>7bfc033</code> (<em>Publish bare-metal kubernetes cluster walkthrough</em>) by GerkinDev</a>
   
 
   &nbsp;&middot;&nbsp; <span class="single__info" title="Reading Time"> ☕&nbsp;4&nbsp;min read </span>
@@ -1889,7 +1889,7 @@ See
 
 
     
-    <!--  -->
+    <!-- gerkindev.github.io -->
     
     
 
@@ -1903,14 +1903,14 @@ See
 
 
 <a
-    href="#helm-a-kubernetes-stack-template-repository"
-    
+    href="https://gerkindev.github.io/devblog/blog/kubernetes-qol/#helm-a-kubernetes-stack-template-repository"
+     title="Quality Of Life improvements to kubernetes"
      target="_blank" rel="noopener noreferrer">
 
     
     <i class="fas fa-link" title="See on this site"></i>
 
-    
+    Quality Of Life improvements to kubernetes
 </a>
 </em> for more infos.</li>
 <li><input checked="" disabled="" type="checkbox" /> You have 
@@ -1970,7 +1970,7 @@ See
 
 
     
-    <!--  -->
+    <!-- gerkindev.github.io -->
     
     
 
@@ -1984,14 +1984,14 @@ See
 
 
 <a
-    href="#krew-a-kubectl-plugins-manager"
-    
+    href="https://gerkindev.github.io/devblog/blog/kubernetes-qol/#krew-a-kubectl-plugins-manager"
+     title="Quality Of Life improvements to kubernetes"
      target="_blank" rel="noopener noreferrer">
 
     
     <i class="fas fa-link" title="See on this site"></i>
 
-    
+    Quality Of Life improvements to kubernetes
 </a>
 </em> for more infos.</li>
 </ul>
@@ -2274,6 +2274,79 @@ See
           
             Well, things are getting real and are on the point to become quite complex. So we&rsquo;ll setup (super unsafe) dashboards to see what is going on easily. After all, we have nothing critical for now, but we might get troubles soon. And, don&rsquo;t worry, we&rsquo;ll make it safe just after that.
 1. Traefik dashboard: monitoring routes The traefik dashboard will help us in the diagnostics of our ingress routes and traefik-related stuff.
+          
+        </div>
+      </div>
+    </div>
+
+    
+    
+  </div>
+  <hr />
+</article>
+
+
+            
+                
+  <article class="summary-classic" data-ani="true">
+  <div class="summary-classic__flex-box" >
+
+    
+
+    <div class="summary-classic__content">
+      <header>
+        <h5 class="title h5"><a href='https://gerkindev.github.io/devblog/walkthroughs/kubernetes/07-authentication/'>Setup cluster&#39;s authentication</a> </h5>
+        <h6 class="subtitle caption">
+          <time title="Written At" dir="ltr">📅&nbsp;Nov 16, 2020 </time>
+          
+          <time title="Modified At" dir="ltr"> &middot; 📝&nbsp;Feb 1, 2021 </time>
+          
+          <span title="Reading Time" dir="ltr"> &middot; ☕&nbsp;8&nbsp;min read </span>
+          
+        </h6>
+      </header>
+      <div>
+        <div class="summary-classic__text p2">
+          
+            Here is a graph of the RBAC setup we are going to implement:
+1. Setup keycloak We&rsquo;ll use keycloak to proxy our authentication for all monitors, using a single realm. You may use several realms in real-life situations. This is probably the tough part, and you may tweak heavily the following guide. Moreover, I may forgot to write some instructions, or somes are heavily linked to your very own setup.
+          
+        </div>
+      </div>
+    </div>
+
+    
+    
+  </div>
+  <hr />
+</article>
+
+
+            
+                
+  <article class="summary-classic" data-ani="true">
+  <div class="summary-classic__flex-box" >
+
+    
+
+    <div class="summary-classic__content">
+      <header>
+        <h5 class="title h5"><a href='https://gerkindev.github.io/devblog/walkthroughs/kubernetes/08-kubernetes-user-management/'>Administrate the cluster with authentication</a> </h5>
+        <h6 class="subtitle caption">
+          <time title="Written At" dir="ltr">📅&nbsp;Nov 16, 2020 </time>
+          
+          <time title="Modified At" dir="ltr"> &middot; 📝&nbsp;Feb 1, 2021 </time>
+          
+          <span title="Reading Time" dir="ltr"> &middot; ☕&nbsp;6&nbsp;min read </span>
+          
+        </h6>
+      </header>
+      <div>
+        <div class="summary-classic__text p2">
+          
+            Create the realm and the client https://github.com/zufardhiyaulhaq/engineering-notes/blob/master/notes/kubernetes-keycloak-integration.md
+https://github.com/zufardhiyaulhaq/engineering-notes/blob/master/notes/kubernetes-keycloak-integration.md#integrating
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  REALM_URL=&#34;https://keycloak.{{cluster.baseHostName}}/auth/realms/{{apiServer.realmName}}&#34; # Log in TOKEN_RESPONSE=&#34;$(curl \  -d &#34;grant_type=password&#34; \  -d &#34;client_id={{apiServer.clientId}}&#34; \  -d &#34;client_secret={{apiServer.clientSecret}}&#34; \  -d &#34;username=admin-user&#34; \  -d &#34;password=admin-user&#34; \  $REALM_URL/protocol/openid-connect/token)&#34; # Extract the access token ACCESS_TOKEN=&#34;$(echo &#34;$TOKEN_RESPONSE&#34; | jq &#39;.access_token&#39; -r)&#34; # Check token curl \  --user &#34;{{apiServer.
           
         </div>
       </div>
@@ -2647,6 +2720,10 @@ Hopefully, here comes the real huge advantage of kubernetes: it is meant to scal
     <ul class="related-ul">
         
         <li>
+          <a href="https://gerkindev.github.io/devblog/walkthroughs/kubernetes/08-kubernetes-user-management/" class="related__link">Administrate the cluster with authentication</a>
+        </li>
+        
+        <li>
           <a href="https://gerkindev.github.io/devblog/walkthroughs/kubernetes/02-cluster/" class="related__link">Kickstart the cluster</a>
         </li>
         
@@ -2660,10 +2737,6 @@ Hopefully, here comes the real huge advantage of kubernetes: it is meant to scal
         
         <li>
           <a href="https://gerkindev.github.io/devblog/walkthroughs/kubernetes/06-monitoring/" class="related__link">Monitoring: See what is going on</a>
-        </li>
-        
-        <li>
-          <a href="https://gerkindev.github.io/devblog/walkthroughs/kubernetes/09-safe-monitoring/" class="related__link">Protect monitoring with authentication</a>
         </li>
         
     </ul>

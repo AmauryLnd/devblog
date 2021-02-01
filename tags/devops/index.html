@@ -1896,6 +1896,79 @@
 
     <div class="summary-classic__content">
       <header>
+        <h5 class="title h5"><a href='https://gerkindev.github.io/devblog/walkthroughs/kubernetes/07-authentication/'>Setup cluster&#39;s authentication</a> </h5>
+        <h6 class="subtitle caption">
+          <time title="Written At" dir="ltr">📅&nbsp;Nov 16, 2020 </time>
+          
+          <time title="Modified At" dir="ltr"> &middot; 📝&nbsp;Feb 1, 2021 </time>
+          
+          <span title="Reading Time" dir="ltr"> &middot; ☕&nbsp;8&nbsp;min read </span>
+          
+        </h6>
+      </header>
+      <div>
+        <div class="summary-classic__text p2">
+          
+            Here is a graph of the RBAC setup we are going to implement:
+1. Setup keycloak We&rsquo;ll use keycloak to proxy our authentication for all monitors, using a single realm. You may use several realms in real-life situations. This is probably the tough part, and you may tweak heavily the following guide. Moreover, I may forgot to write some instructions, or somes are heavily linked to your very own setup.
+          
+        </div>
+      </div>
+    </div>
+
+    
+    
+  </div>
+  <hr />
+</article>
+
+
+      
+        
+  <article class="summary-classic" data-ani="true">
+  <div class="summary-classic__flex-box" >
+
+    
+
+    <div class="summary-classic__content">
+      <header>
+        <h5 class="title h5"><a href='https://gerkindev.github.io/devblog/walkthroughs/kubernetes/08-kubernetes-user-management/'>Administrate the cluster with authentication</a> </h5>
+        <h6 class="subtitle caption">
+          <time title="Written At" dir="ltr">📅&nbsp;Nov 16, 2020 </time>
+          
+          <time title="Modified At" dir="ltr"> &middot; 📝&nbsp;Feb 1, 2021 </time>
+          
+          <span title="Reading Time" dir="ltr"> &middot; ☕&nbsp;6&nbsp;min read </span>
+          
+        </h6>
+      </header>
+      <div>
+        <div class="summary-classic__text p2">
+          
+            Create the realm and the client https://github.com/zufardhiyaulhaq/engineering-notes/blob/master/notes/kubernetes-keycloak-integration.md
+https://github.com/zufardhiyaulhaq/engineering-notes/blob/master/notes/kubernetes-keycloak-integration.md#integrating
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  REALM_URL=&#34;https://keycloak.{{cluster.baseHostName}}/auth/realms/{{apiServer.realmName}}&#34; # Log in TOKEN_RESPONSE=&#34;$(curl \  -d &#34;grant_type=password&#34; \  -d &#34;client_id={{apiServer.clientId}}&#34; \  -d &#34;client_secret={{apiServer.clientSecret}}&#34; \  -d &#34;username=admin-user&#34; \  -d &#34;password=admin-user&#34; \  $REALM_URL/protocol/openid-connect/token)&#34; # Extract the access token ACCESS_TOKEN=&#34;$(echo &#34;$TOKEN_RESPONSE&#34; | jq &#39;.access_token&#39; -r)&#34; # Check token curl \  --user &#34;{{apiServer.
+          
+        </div>
+      </div>
+    </div>
+
+    
+    
+  </div>
+  <hr />
+</article>
+
+
+      
+        
+  <article class="summary-classic" data-ani="true">
+  <div class="summary-classic__flex-box" >
+
+    
+
+    <div class="summary-classic__content">
+      <header>
         <h5 class="title h5"><a href='https://gerkindev.github.io/devblog/walkthroughs/kubernetes/09-safe-monitoring/'>Protect monitoring with authentication</a> </h5>
         <h6 class="subtitle caption">
           <time title="Written At" dir="ltr">📅&nbsp;Nov 16, 2020 </time>
@@ -2034,7 +2107,7 @@ Traefik dashboard Kibana Kube dashboard   References   https://itnext.io/protect
                         Authentication
                     </span>
                     <span class="taxo__num" dir="auto">
-                        1
+                        3
                     </span>
                 </a>
             </span>
@@ -2047,7 +2120,7 @@ Traefik dashboard Kibana Kube dashboard   References   https://itnext.io/protect
                         DevOps
                     </span>
                     <span class="taxo__num" dir="auto">
-                        9
+                        11
                     </span>
                 </a>
             </span>
@@ -2060,7 +2133,7 @@ Traefik dashboard Kibana Kube dashboard   References   https://itnext.io/protect
                         kubernetes
                     </span>
                     <span class="taxo__num" dir="auto">
-                        11
+                        13
                     </span>
                 </a>
             </span>
@@ -2099,7 +2172,7 @@ Traefik dashboard Kibana Kube dashboard   References   https://itnext.io/protect
                         Security
                     </span>
                     <span class="taxo__num" dir="auto">
-                        2
+                        4
                     </span>
                 </a>
             </span>
@@ -2125,7 +2198,7 @@ Traefik dashboard Kibana Kube dashboard   References   https://itnext.io/protect
                         Sysadmin
                     </span>
                     <span class="taxo__num" dir="auto">
-                        10
+                        12
                     </span>
                 </a>
             </span>
@@ -2138,7 +2211,7 @@ Traefik dashboard Kibana Kube dashboard   References   https://itnext.io/protect
                         Web service
                     </span>
                     <span class="taxo__num" dir="auto">
-                        3
+                        4
                     </span>
                 </a>
             </span>
@@ -2164,7 +2237,7 @@ Traefik dashboard Kibana Kube dashboard   References   https://itnext.io/protect
                         Kubernetes
                     </span>
                     <span class="taxo__num" dir="auto">
-                        10
+                        12
                     </span>
                 </a>
             </span>
