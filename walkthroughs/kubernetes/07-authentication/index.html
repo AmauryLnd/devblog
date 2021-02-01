@@ -1334,7 +1334,7 @@
 <meta name="keywords" content="Kubernetes,Sysadmin,DevOps,Web service,Security,Authentication">
 
 <meta name="created" content="2020-11-16T02:35:47&#43;0100">
-<meta name="modified" content="2021-02-01T16:42:59&#43;0100">
+<meta name="modified" content="2021-02-01T19:47:58&#43;0100">
 <meta property="article:published_time" content="2020-11-16T02:35:47&#43;0100">
 
 <meta name="author" content="GerkinDev">
@@ -1383,7 +1383,7 @@
     "@type": "WebPage",
     "headline": "Setup cluster's authentication",
     "datePublished": "2020-11-16T02:35:47+01:00",
-    "dateModified": "2021-02-01T16:42:59+01:00",
+    "dateModified": "2021-02-01T19:47:58+01:00",
     "url" : "https://gerkindev.github.io/devblog/walkthroughs/kubernetes/07-authentication/",
     "description": "Here is a graph of the RBAC setup we are going to implement: 1. Setup keycloak We\u0026rsquo;ll use keycloak to proxy our authentication for all monitors, using a single …",
     "keywords": ["Kubernetes","Sysadmin","DevOps","Web service","Security","Authentication"],
@@ -1717,7 +1717,7 @@
   
   
   
-    via commit&nbsp;<a href="https://github.com/GerkinDev/devblog/commit/7bfc033ea6400fd67869ce2c582fc4fcbba7073e" target="_blank"><code>7bfc033</code> (<em>Publish bare-metal kubernetes cluster walkthrough</em>) by GerkinDev</a>
+    via commit&nbsp;<a href="https://github.com/GerkinDev/devblog/commit/367f1f5c974d3eb08f3968b7523b7c1ff2ab44ff" target="_blank"><code>367f1f5</code> (<em>Fix dead links &amp; retry circleci build</em>) by GerkinDev</a>
   
 
   &nbsp;&middot;&nbsp; <span class="single__info" title="Reading Time"> ☕&nbsp;8&nbsp;min read </span>
@@ -1760,7 +1760,7 @@
       <article class="single__contents" data-dir="ltr" data-ani="true">
         
         <p>Here is a graph of the RBAC setup we are going to implement:</p>
-<p><img src="./schema.svg" alt="RBAC" /></p>
+<p><img src="./_assets/schema.svg" alt="RBAC" /></p>
 <h2 id="1-setup-keycloak">1. Setup keycloak</h2>
 <p>We&rsquo;ll use keycloak to proxy our authentication for all monitors, using a single realm. You may use several realms in real-life situations. This is probably the tough part, and you may tweak heavily the following guide. Moreover, I may forgot to write some instructions, or somes are heavily linked to your very own setup.</p>
 <h3 id="11-install-keycloak">1.1. Install keycloak</h3>
@@ -1803,10 +1803,11 @@
 
 
 
+
 <a
     href="https://hub.helm.sh/charts/codecentric/keycloak"
     
-    >
+     target="_blank" rel="noopener noreferrer">
 
     
     <i class="fas fa-external-link-alt" title="See on hub.helm.sh"></i>
@@ -1835,6 +1836,7 @@
             
         
     
+
 
 
 
@@ -1869,6 +1871,7 @@
             
         
     
+
 
 
 
@@ -2044,6 +2047,7 @@
 
 
 
+
 <a
     href="./kubernetes/authentication/01-KeycloakChartValues.yaml"
     
@@ -2074,10 +2078,11 @@
 
 
 
+
 <a
     href="https://hub.helm.sh/charts/codecentric/keycloak"
     
-    >
+     target="_blank" rel="noopener noreferrer">
 
     
     <i class="fas fa-external-link-alt" title="See on hub.helm.sh"></i>
@@ -2200,10 +2205,11 @@ kubectl edit configmap coredns -n kube-system
 
 
 
+
 <a
     href="https://quay.io/repository/keycloak/keycloak-gatekeeper"
     
-    >
+     target="_blank" rel="noopener noreferrer">
 
     
     <i class="fas fa-external-link-alt" title="See on quay.io"></i>
@@ -2262,10 +2268,11 @@ kubectl edit configmap coredns -n kube-system
 
 
 
+
 <a
     href="https://quay.io/repository/louketo/louketo-proxy?tag=latest&amp;tab=tags"
     
-    >
+     target="_blank" rel="noopener noreferrer">
 
     
     <i class="fas fa-external-link-alt" title="See on quay.io"></i>
@@ -2293,10 +2300,11 @@ kubectl edit configmap coredns -n kube-system
 
 
 
+
 <a
     href="https://github.com/louketo/louketo-proxy/issues/683"
     
-    >
+     target="_blank" rel="noopener noreferrer">
 
     
     <i class="fas fa-bug" title="See the issue on GitHub"></i>
@@ -2324,10 +2332,11 @@ kubectl edit configmap coredns -n kube-system
 
 
 
+
 <a
     href="https://github.com/louketo/louketo-proxy/issues/683#issuecomment-709682039"
     
-    >
+     target="_blank" rel="noopener noreferrer">
 
     
     <i class="fas fa-bug" title="See the issue on GitHub"></i>
@@ -2356,6 +2365,7 @@ kubectl edit configmap coredns -n kube-system
             
         
     
+
 
 
 
@@ -2758,15 +2768,15 @@ git commit -m <span class="s2">&#34;Setup cluster&#39;s authentication\n\nFollow
         </li>
         
         <li>
+          <a href="https://gerkindev.github.io/devblog/walkthroughs/kubernetes/03-router/" class="related__link">Setup the cluster&#39;s internal router</a>
+        </li>
+        
+        <li>
           <a href="https://gerkindev.github.io/devblog/walkthroughs/kubernetes/04-reverse-proxy/" class="related__link">Make services reachable from the world</a>
         </li>
         
         <li>
           <a href="https://gerkindev.github.io/devblog/walkthroughs/kubernetes/01-audit-log/" class="related__link">Setup the cluster&#39;s Audit Log</a>
-        </li>
-        
-        <li>
-          <a href="https://gerkindev.github.io/devblog/walkthroughs/kubernetes/03-router/" class="related__link">Setup the cluster&#39;s internal router</a>
         </li>
         
     </ul>
@@ -2779,15 +2789,15 @@ git commit -m <span class="s2">&#34;Setup cluster&#39;s authentication\n\nFollow
 <script src="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/gitment.browser.min.js" crossorigin="anonymous"></script>
 <script type="text/javascript">
   var gitment = new Gitment({
-    id: '2020-11-16 02:35:47 \u002b0100 CET',
+    id: '2020-11-16 02:35:47 \u002b0100 \u002b0100',
     title: 'Setup cluster\u0027s authentication',
     link: decodeURI(location.href),
     desc: 'Here is a graph of the RBAC setup we are going to implement:\n1. Setup keycloak We\u0026rsquo;ll use keycloak to proxy our authentication for all monitors, using a single realm. You may use several realms in real-life situations. This is probably the tough part, and you may tweak heavily the following guide. Moreover, I may forgot to write some instructions, or somes are heavily linked to your very own setup.',
     owner: 'GerkinDev',
     repo: 'devblog',
     oauth: {
-      client_id: '3319e7f339bc877b8b50',
-      client_secret: ''
+      client_id: '513b359e4303b14488f0',
+      client_secret: 'ccc9932e20b96a9937dad65cb60a6873de25555a'
     }
   });
   gitment.render('comments-gitment');

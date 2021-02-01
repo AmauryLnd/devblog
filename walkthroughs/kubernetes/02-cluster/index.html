@@ -1774,10 +1774,11 @@
 
 
 
+
 <a
     href="https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/#tabs-pod-install-3"
     
-    >
+     target="_blank" rel="noopener noreferrer">
 
     
     <i class="fas fa-book" title="See the docs"></i>
@@ -1832,6 +1833,7 @@
 
 
 
+
 <a
     
     
@@ -1862,10 +1864,11 @@
 
 
 
+
 <a
     href="https://github.com/coreos/flannel/blob/master/Documentation/kubernetes.md#kubeadm"
     
-    >
+     target="_blank" rel="noopener noreferrer">
 
     
     <i class="fas fa-book" title="See the docs"></i>
@@ -1893,10 +1896,11 @@
 
 
 
+
 <a
     href="https://github.com/kubernetes/kubeadm/issues/1899"
     
-    >
+     target="_blank" rel="noopener noreferrer">
 
     
     <i class="fas fa-bug" title="See the issue on GitHub"></i>
@@ -1948,6 +1952,7 @@
 
 
     
+
 
 
 <a
@@ -2146,6 +2151,7 @@ kubectl taint nodes <span class="k">$(</span>hostname<span class="k">)</span> no
 
 
 
+
 <a
     href="./kubernetes/metallb-configmap.yaml"
     
@@ -2178,10 +2184,11 @@ kubectl taint nodes <span class="k">$(</span>hostname<span class="k">)</span> no
 
 
 
+
 <a
     href="https://metallb.universe.tf/configuration/"
     
-    >
+     target="_blank" rel="noopener noreferrer">
 
     
     <i class="fas fa-book" title="See on metallb.universe.tf"></i>
@@ -2720,11 +2727,15 @@ ip link delete flannel.1
     <ul class="related-ul">
         
         <li>
-          <a href="https://gerkindev.github.io/devblog/walkthroughs/kubernetes/08-kubernetes-user-management/" class="related__link">Administrate the cluster with authentication</a>
+          <a href="https://gerkindev.github.io/devblog/walkthroughs/kubernetes/07-authentication/" class="related__link">Setup cluster&#39;s authentication</a>
         </li>
         
         <li>
-          <a href="https://gerkindev.github.io/devblog/walkthroughs/kubernetes/04-reverse-proxy/" class="related__link">Make services reachable from the world</a>
+          <a href="https://gerkindev.github.io/devblog/walkthroughs/kubernetes/03-router/" class="related__link">Setup the cluster&#39;s internal router</a>
+        </li>
+        
+        <li>
+          <a href="https://gerkindev.github.io/devblog/walkthroughs/kubernetes/08-kubernetes-user-management/" class="related__link">Administrate the cluster with authentication</a>
         </li>
         
         <li>
@@ -2732,11 +2743,7 @@ ip link delete flannel.1
         </li>
         
         <li>
-          <a href="https://gerkindev.github.io/devblog/walkthroughs/kubernetes/06-monitoring/" class="related__link">Monitoring: See what is going on</a>
-        </li>
-        
-        <li>
-          <a href="https://gerkindev.github.io/devblog/walkthroughs/kubernetes/09-safe-monitoring/" class="related__link">Protect monitoring with authentication</a>
+          <a href="https://gerkindev.github.io/devblog/walkthroughs/kubernetes/00-vpn/" class="related__link">Setup the cluster&#39;s VPN</a>
         </li>
         
     </ul>
@@ -2749,15 +2756,15 @@ ip link delete flannel.1
 <script src="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/gitment.browser.min.js" crossorigin="anonymous"></script>
 <script type="text/javascript">
   var gitment = new Gitment({
-    id: '2020-11-16 02:35:47 \u002b0100 CET',
+    id: '2020-11-16 02:35:47 \u002b0100 \u002b0100',
     title: 'Kickstart the cluster',
     link: decodeURI(location.href),
     desc: 'Configure network requirements Required by  flannel config .\n1 2 3 4 5 6  if [ \u0026#34;$(cat \/proc\/sys\/net\/bridge\/bridge-nf-call-iptables)\u0026#34; = \u0026#34;1\u0026#34; ]; then echo \u0026#34;OK\u0026#34; else echo \u0026#34;Setting bridged mode\u0026#34; sysctl net.bridge.bridge-nf-call-iptables=1 fi   Create the cluster config file   References   How to set bind address by config file: https:\/\/stackoverflow.com\/a\/60391611    We are now going to configure the cluster. For the sake of traceability, this configuration won\u0026rsquo;t be done via CLI flags, but via  a configuration file .',
     owner: 'GerkinDev',
     repo: 'devblog',
     oauth: {
-      client_id: '3319e7f339bc877b8b50',
-      client_secret: ''
+      client_id: '513b359e4303b14488f0',
+      client_secret: 'ccc9932e20b96a9937dad65cb60a6873de25555a'
     }
   });
   gitment.render('comments-gitment');

@@ -25,7 +25,7 @@
         <link>https://gerkindev.github.io/devblog/walkthroughs/kubernetes/07-authentication/</link>
         <pubDate>Mon, 16 Nov 2020 02:35:47 +0100</pubDate>
         
-        <atom:modified>Mon, 01 Feb 2021 16:42:59 +0100</atom:modified>
+        <atom:modified>Mon, 01 Feb 2021 19:47:58 +0100</atom:modified>
         <guid>https://gerkindev.github.io/devblog/walkthroughs/kubernetes/07-authentication/</guid>
         <description>Here is a graph of the RBAC setup we are going to implement:
 1. Setup keycloak We&amp;rsquo;ll use keycloak to proxy our authentication for all monitors, using a single realm. You may use several realms in real-life situations. This is probably the tough part, and you may tweak heavily the following guide. Moreover, I may forgot to write some instructions, or somes are heavily linked to your very own setup.</description>

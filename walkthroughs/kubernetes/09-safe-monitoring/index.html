@@ -1783,6 +1783,7 @@
     
 
 
+
 <a
     href="../06-monitoring"
     
@@ -1833,10 +1834,11 @@
 
 
 
+
 <a
     href="https://github.com/louketo/louketo-proxy"
     
-    >
+     target="_blank" rel="noopener noreferrer">
 
     
     <i class="fab fa-github" title="See on GitHub"></i>
@@ -2411,15 +2413,15 @@ git commit -m <span class="s2">&#34;Protect monitoring with authentication\n\nFo
         </li>
         
         <li>
+          <a href="https://gerkindev.github.io/devblog/walkthroughs/kubernetes/03-router/" class="related__link">Setup the cluster&#39;s internal router</a>
+        </li>
+        
+        <li>
           <a href="https://gerkindev.github.io/devblog/walkthroughs/kubernetes/04-reverse-proxy/" class="related__link">Make services reachable from the world</a>
         </li>
         
         <li>
           <a href="https://gerkindev.github.io/devblog/walkthroughs/kubernetes/01-audit-log/" class="related__link">Setup the cluster&#39;s Audit Log</a>
-        </li>
-        
-        <li>
-          <a href="https://gerkindev.github.io/devblog/walkthroughs/kubernetes/03-router/" class="related__link">Setup the cluster&#39;s internal router</a>
         </li>
         
     </ul>
@@ -2432,15 +2434,15 @@ git commit -m <span class="s2">&#34;Protect monitoring with authentication\n\nFo
 <script src="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/gitment.browser.min.js" crossorigin="anonymous"></script>
 <script type="text/javascript">
   var gitment = new Gitment({
-    id: '2020-11-16 02:35:47 \u002b0100 CET',
+    id: '2020-11-16 02:35:47 \u002b0100 \u002b0100',
     title: 'Protect monitoring with authentication',
     link: decodeURI(location.href),
     desc: 'Now that we have our authentication service up and running, we can protect our dashboards installed in the step  06 - Monitoring: See what is going on  using our Keycloak OpenID Connect provider. Here is a diagram on how authorization will be managed:\nTraefik dashboard Kibana Kube dashboard   References   https:\/\/itnext.io\/protect-kubernetes-dashboard-with-openid-connect-104b9e75e39c    Again, we are going to set up a new instance of  louketo-proxy .',
     owner: 'GerkinDev',
     repo: 'devblog',
     oauth: {
-      client_id: '3319e7f339bc877b8b50',
-      client_secret: ''
+      client_id: '513b359e4303b14488f0',
+      client_secret: 'ccc9932e20b96a9937dad65cb60a6873de25555a'
     }
   });
   gitment.render('comments-gitment');

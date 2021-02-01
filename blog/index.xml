@@ -25,7 +25,7 @@
         <link>https://gerkindev.github.io/devblog/blog/kubernetes-qol/</link>
         <pubDate>Wed, 18 Nov 2020 00:22:31 +0100</pubDate>
         
-        <atom:modified>Mon, 01 Feb 2021 15:40:48 +0100</atom:modified>
+        <atom:modified>Mon, 01 Feb 2021 19:47:58 +0100</atom:modified>
         <guid>https://gerkindev.github.io/devblog/blog/kubernetes-qol/</guid>
         <description>Kubernetes is&amp;hellip;. Quite a thing, to say the least ! 😅 Even if their conceptors did a great job at making the kubectl cli as usable as possible, it can sometimes be a pain to be productive with it, read outputs, or do repetitive tasks. That&amp;rsquo;s why I wrote this small Quality of life improvements post: to regroup some install steps you might have missed, give you some useful 3rd party tools or maybe even give you tips a step ahead.</description>
         

@@ -1786,6 +1786,7 @@
 
 
 
+
 <a
     href="./kubernetes/traefik/21-IngressController.yaml"
     
@@ -1816,6 +1817,7 @@
             
         
     
+
 
 
 
@@ -2089,6 +2091,7 @@ kubectl apply -f ./kubernetes/traefik/23-IngressRoutes.yaml
     
 
 
+
 <a
     href=""
     
@@ -2138,10 +2141,11 @@ kubectl apply -f ./kubernetes/traefik/23-IngressRoutes.yaml
 
 
 
+
 <a
     href="https://www.elastic.co/kibana"
     
-    >
+     target="_blank" rel="noopener noreferrer">
 
     
     <i class="fas fa-external-link-alt" title="See on www.elastic.co"></i>
@@ -2169,10 +2173,11 @@ kubectl apply -f ./kubernetes/traefik/23-IngressRoutes.yaml
 
 
 
+
 <a
     href="https://www.elastic.co/elasticsearch/"
     
-    >
+     target="_blank" rel="noopener noreferrer">
 
     
     <i class="fas fa-external-link-alt" title="See on www.elastic.co"></i>
@@ -2189,6 +2194,7 @@ kubectl apply -f ./kubernetes/traefik/23-IngressRoutes.yaml
 
 
     
+
 
 
 
@@ -2213,6 +2219,7 @@ kubectl apply -f ./kubernetes/traefik/23-IngressRoutes.yaml
 
 
     
+
 
 
 
@@ -2855,6 +2862,7 @@ kubectl apply -f ./kubernetes/kibana/21-Ingress.yaml
 
 
 
+
 <a
     href="./kubernetes/kibana/31-Fluentd.yaml"
     
@@ -2885,6 +2893,7 @@ kubectl apply -f ./kubernetes/kibana/21-Ingress.yaml
             
         
     
+
 
 
 
@@ -4678,11 +4687,11 @@ git commit -m <span class="s2">&#34;Monitoring: See what is going on\n\nFollowin
   <div class="prev-next">
     
       
-      <a href="https://gerkindev.github.io/devblog/walkthroughs/kubernetes/04-reverse-proxy/" class="pagination-single__left">      
+      <a href="https://gerkindev.github.io/devblog/walkthroughs/kubernetes/05-storage/" class="pagination-single__left">      
         <div class="pagination-single__icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M19 11H7.83l4.88-4.88c.39-.39.39-1.03 0-1.42-.39-.39-1.02-.39-1.41 0l-6.59 6.59c-.39.39-.39 1.02 0 1.41l6.59 6.59c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L7.83 13H19c.55 0 1-.45 1-1s-.45-1-1-1z"/></svg>
         </div>
-        <div class="pagination-single__left-title">Make services reachable from the world</div>
+        <div class="pagination-single__left-title">Make things persistent</div>
       </a>
       
       <div class="grow"></div>
@@ -4801,19 +4810,19 @@ git commit -m <span class="s2">&#34;Monitoring: See what is going on\n\nFollowin
         </li>
         
         <li>
-          <a href="https://gerkindev.github.io/devblog/walkthroughs/kubernetes/08-kubernetes-user-management/" class="related__link">Administrate the cluster with authentication</a>
-        </li>
-        
-        <li>
-          <a href="https://gerkindev.github.io/devblog/walkthroughs/kubernetes/02-cluster/" class="related__link">Kickstart the cluster</a>
-        </li>
-        
-        <li>
           <a href="https://gerkindev.github.io/devblog/walkthroughs/kubernetes/04-reverse-proxy/" class="related__link">Make services reachable from the world</a>
         </li>
         
         <li>
-          <a href="https://gerkindev.github.io/devblog/walkthroughs/kubernetes/05-storage/" class="related__link">Make things persistent</a>
+          <a href="https://gerkindev.github.io/devblog/walkthroughs/kubernetes/07-authentication/" class="related__link">Setup cluster&#39;s authentication</a>
+        </li>
+        
+        <li>
+          <a href="https://gerkindev.github.io/devblog/walkthroughs/kubernetes/08-kubernetes-user-management/" class="related__link">Administrate the cluster with authentication</a>
+        </li>
+        
+        <li>
+          <a href="https://gerkindev.github.io/devblog/walkthroughs/kubernetes/09-safe-monitoring/" class="related__link">Protect monitoring with authentication</a>
         </li>
         
     </ul>
@@ -4826,15 +4835,15 @@ git commit -m <span class="s2">&#34;Monitoring: See what is going on\n\nFollowin
 <script src="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/gitment.browser.min.js" crossorigin="anonymous"></script>
 <script type="text/javascript">
   var gitment = new Gitment({
-    id: '2020-11-16 02:35:47 \u002b0100 CET',
+    id: '2020-11-16 02:35:47 \u002b0100 \u002b0100',
     title: 'Monitoring: See what is going on',
     link: decodeURI(location.href),
     desc: 'Well, things are getting real and are on the point to become quite complex. So we\u0026rsquo;ll setup (super unsafe) dashboards to see what is going on easily. After all, we have nothing critical for now, but we might get troubles soon. And, don\u0026rsquo;t worry, we\u0026rsquo;ll make it safe just after that.\n1. Traefik dashboard: monitoring routes The traefik dashboard will help us in the diagnostics of our ingress routes and traefik-related stuff.',
     owner: 'GerkinDev',
     repo: 'devblog',
     oauth: {
-      client_id: '3319e7f339bc877b8b50',
-      client_secret: ''
+      client_id: '513b359e4303b14488f0',
+      client_secret: 'ccc9932e20b96a9937dad65cb60a6873de25555a'
     }
   });
   gitment.render('comments-gitment');

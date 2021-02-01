@@ -1873,10 +1873,11 @@ root hard nofile 65536
 
 
 
+
 <a
     href="https://docs.fluentd.org/installation/before-install#optimize-network-kernel-parameters"
     
-    >
+     target="_blank" rel="noopener noreferrer">
 
     
     <i class="fas fa-external-link-alt" title="See on docs.fluentd.org"></i>
@@ -1954,6 +1955,7 @@ cat /var/log/td-agent/td-agent.log <span class="c1"># should end with our test m
             
         
     
+
 
 
 
@@ -2096,10 +2098,11 @@ systemctl restart td-agent.service
 
 
 
+
 <a
     href="https://raw.githubusercontent.com/kubernetes/website/master/content/en/examples/audit/audit-policy.yaml"
     
-    >
+     target="_blank" rel="noopener noreferrer">
 
     
     <i class="fas fa-external-link-alt" title="See on raw.githubusercontent.com"></i>
@@ -2126,6 +2129,7 @@ systemctl restart td-agent.service
             
         
     
+
 
 
 
@@ -2668,11 +2672,11 @@ sysctl -w net.ipv6.conf.all.disable_ipv6<span class="o">=</span><span class="m">
         </li>
         
         <li>
-          <a href="https://gerkindev.github.io/devblog/walkthroughs/kubernetes/06-monitoring/" class="related__link">Monitoring: See what is going on</a>
+          <a href="https://gerkindev.github.io/devblog/walkthroughs/kubernetes/09-safe-monitoring/" class="related__link">Protect monitoring with authentication</a>
         </li>
         
         <li>
-          <a href="https://gerkindev.github.io/devblog/walkthroughs/kubernetes/09-safe-monitoring/" class="related__link">Protect monitoring with authentication</a>
+          <a href="https://gerkindev.github.io/devblog/walkthroughs/kubernetes/06-monitoring/" class="related__link">Monitoring: See what is going on</a>
         </li>
         
         <li>
@@ -2693,15 +2697,15 @@ sysctl -w net.ipv6.conf.all.disable_ipv6<span class="o">=</span><span class="m">
 <script src="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/gitment.browser.min.js" crossorigin="anonymous"></script>
 <script type="text/javascript">
   var gitment = new Gitment({
-    id: '2020-11-16 02:35:47 \u002b0100 CET',
+    id: '2020-11-16 02:35:47 \u002b0100 \u002b0100',
     title: 'Setup the cluster\u0027s Audit Log',
     link: decodeURI(location.href),
     desc: 'References   https:\/\/docs.kublr.com\/articles\/kubernetes-log-audit\/ https:\/\/mherman.org\/blog\/logging-in-kubernetes-with-elasticsearch-Kibana-fluentd\/ https:\/\/kubernetes.io\/docs\/tasks\/debug-application-cluster\/audit\/#log-collector-examples     Note : Even if this part is not required, you should not ignore it on dev environment and should really really REALLY not skip it for production. In fact, it can contain useful debug informations and security traces to see what is going on in your kubernetes cluster, and even on your whole server(s).\n This tutorial will guide you to setup audit log policy, catch logs with Fluentd, cast them to elasticsearch \u0026amp; show them using Kibana.',
     owner: 'GerkinDev',
     repo: 'devblog',
     oauth: {
-      client_id: '3319e7f339bc877b8b50',
-      client_secret: ''
+      client_id: '513b359e4303b14488f0',
+      client_secret: 'ccc9932e20b96a9937dad65cb60a6873de25555a'
     }
   });
   gitment.render('comments-gitment');

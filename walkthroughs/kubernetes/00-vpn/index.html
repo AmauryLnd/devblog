@@ -1334,7 +1334,7 @@
 <meta name="keywords" content="Kubernetes,Sysadmin,DevOps,Networking">
 
 <meta name="created" content="2020-11-16T02:35:47&#43;0100">
-<meta name="modified" content="2021-02-01T16:42:59&#43;0100">
+<meta name="modified" content="2021-02-01T19:47:58&#43;0100">
 <meta property="article:published_time" content="2020-11-16T02:35:47&#43;0100">
 
 <meta name="author" content="GerkinDev">
@@ -1383,7 +1383,7 @@
     "@type": "WebPage",
     "headline": "Setup the cluster's VPN",
     "datePublished": "2020-11-16T02:35:47+01:00",
-    "dateModified": "2021-02-01T16:42:59+01:00",
+    "dateModified": "2021-02-01T19:47:58+01:00",
     "url" : "https://gerkindev.github.io/devblog/walkthroughs/kubernetes/00-vpn/",
     "description": "References   How To Run OpenVPN in a Docker Container on Ubuntu 14.04 Running Docker Containers with Systemd    Because we are installing our cluster bare metal on …",
     "keywords": ["Kubernetes","Sysadmin","DevOps","Networking"],
@@ -1717,7 +1717,7 @@
   
   
   
-    via commit&nbsp;<a href="https://github.com/GerkinDev/devblog/commit/7bfc033ea6400fd67869ce2c582fc4fcbba7073e" target="_blank"><code>7bfc033</code> (<em>Publish bare-metal kubernetes cluster walkthrough</em>) by GerkinDev</a>
+    via commit&nbsp;<a href="https://github.com/GerkinDev/devblog/commit/367f1f5c974d3eb08f3968b7523b7c1ff2ab44ff" target="_blank"><code>367f1f5</code> (<em>Fix dead links &amp; retry circleci build</em>) by GerkinDev</a>
   
 
   &nbsp;&middot;&nbsp; <span class="single__info" title="Reading Time"> ☕&nbsp;5&nbsp;min read </span>
@@ -1808,6 +1808,7 @@
     
 
 
+
 <a
     href="https://gerkindev.github.io/devblog/walkthroughs/kubernetes/02-cluster/#initialize-metallb"
      title="Kickstart the cluster"
@@ -1853,10 +1854,11 @@
 
 
 
+
 <a
     href="https://github.com/kylemanna/docker-openvpn"
     
-    >
+     target="_blank" rel="noopener noreferrer">
 
     
     <i class="fas fa-book" title="See the docs"></i>
@@ -1908,10 +1910,11 @@ docker run -v <span class="o">{{</span>vpn.volumeName<span class="o">}}</span>:/
 
 
 
+
 <a
     href="https://github.com/kylemanna/docker-openvpn/blob/master/docs/faqs.md#how-do-i-set-up-a-split-tunnel"
     
-    >
+     target="_blank" rel="noopener noreferrer">
 
     
     <i class="fas fa-book" title="See the docs"></i>
@@ -1946,6 +1949,7 @@ docker run -v <span class="o">{{</span>vpn.volumeName<span class="o">}}</span>:/
 
 
 
+
 <a
     href="./systemd/kubernetes-vpn.service"
     
@@ -1954,7 +1958,7 @@ docker run -v <span class="o">{{</span>vpn.volumeName<span class="o">}}</span>:/
     
     <i class="far fa-file-alt" title="See the resource on this site"></i>
 
-    📋 systemd/kubernetes-vpn.service
+    systemd/kubernetes-vpn.service
 </a> template into <code>/usr/lib/systemd/system</code>, then enable this service. It will run our <em>OpenVPN</em> server container.</p>
 
 
@@ -2082,10 +2086,11 @@ docker <span class="nb">exec</span> -it kubernetes-vpn.service ifconfig tun0 <sp
 
 
 
+
 <a
     href="https://github.com/kylemanna/docker-openvpn/blob/master/docs/static-ips.md"
     
-    >
+     target="_blank" rel="noopener noreferrer">
 
     
     <i class="fas fa-book" title="See the docs"></i>
@@ -2203,6 +2208,7 @@ ping -c <span class="m">4</span> <span class="o">{{</span>vpn.serverIp<span clas
     
 
 
+
 <a
     href="#no-internet-connection-on-nodes-or-no-connection-between-nodes"
     
@@ -2281,10 +2287,11 @@ systemctl restart kubernetes-vpn.service
 
 
 
+
 <a
     href="https://github.com/kylemanna/docker-openvpn/issues/381#issuecomment-616009737"
     
-    >
+     target="_blank" rel="noopener noreferrer">
 
     
     <i class="fas fa-bug" title="See the issue on GitHub"></i>
@@ -2670,11 +2677,11 @@ scp kube-worker-1.ovpn gerkin@192.168.1.26:~
         </li>
         
         <li>
-          <a href="https://gerkindev.github.io/devblog/walkthroughs/kubernetes/02-cluster/" class="related__link">Kickstart the cluster</a>
+          <a href="https://gerkindev.github.io/devblog/walkthroughs/kubernetes/01-audit-log/" class="related__link">Setup the cluster&#39;s Audit Log</a>
         </li>
         
         <li>
-          <a href="https://gerkindev.github.io/devblog/walkthroughs/kubernetes/05-storage/" class="related__link">Make things persistent</a>
+          <a href="https://gerkindev.github.io/devblog/walkthroughs/kubernetes/06-monitoring/" class="related__link">Monitoring: See what is going on</a>
         </li>
         
     </ul>
@@ -2687,15 +2694,15 @@ scp kube-worker-1.ovpn gerkin@192.168.1.26:~
 <script src="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/gitment.browser.min.js" crossorigin="anonymous"></script>
 <script type="text/javascript">
   var gitment = new Gitment({
-    id: '2020-11-16 02:35:47 \u002b0100 CET',
+    id: '2020-11-16 02:35:47 \u002b0100 \u002b0100',
     title: 'Setup the cluster\u0027s VPN',
     link: decodeURI(location.href),
     desc: 'References   How To Run OpenVPN in a Docker Container on Ubuntu 14.04 Running Docker Containers with Systemd    Because we are installing our cluster bare metal on servers exposed on the Internet, we\u0026rsquo;ll need a way to secure all of our network traffic around the critical parts of kubernetes. To do so, we\u0026rsquo;ll use OpenVPN to create a virtual secured network where all of our nodes will work.',
     owner: 'GerkinDev',
     repo: 'devblog',
     oauth: {
-      client_id: '3319e7f339bc877b8b50',
-      client_secret: ''
+      client_id: '513b359e4303b14488f0',
+      client_secret: 'ccc9932e20b96a9937dad65cb60a6873de25555a'
     }
   });
   gitment.render('comments-gitment');
