@@ -1422,7 +1422,6 @@
     </script>
     <div id="container">
         
-    
 
 
 
@@ -1435,9 +1434,12 @@
 
 
 <div class="wrapper__left hide" data-pad="true" dir="ltr">
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/findAndReplaceDOMText/0.4.6/findAndReplaceDOMText.min.js" integrity="sha512-KJxyO81TRgb6HTSjpLHhJgOJMCuBkQtmH/ODpfAcqSOpNX3nnU5Hefbb5MZ3SwaSlFwCn+mwdg1466XEVv4Rew==" crossorigin="anonymous" defer></script>
+  <script src="https://gerkindev.github.io/devblog/scripts/vars.min.8c63757b96db9185559c4edb2a83c61b693a825e31b6adb640e8dde215aa150c.js" defer></script>
   <script>document.querySelector('.wrapper__left').classList.remove('hide')</script>
   <div class="toc__flexbox--outer" data-position="fixed" data-dir="ltr" data-ani="true">
-    <h6 class="toc__title toc__title--outer" data-ani="true">Walkthrough help</h6>
+    <h6 class="toc__title toc__title--outer" data-ani="true">Help</h6>
     
     <label class="switch" data-ani="true">
       <input id="visible-help" aria-label="Visible help" type="checkbox" checked>
@@ -1475,8 +1477,8 @@
       </table>
     </section>
   </div>
+  
 </div>
-
 
         <div class="wrapper" data-type="walkthroughs" data-kind="page">
             <nav class="navbar scrolling" role="navigation" aria-label="main navigation" data-dir="ltr">
@@ -1655,9 +1657,10 @@
 
 
             
-  <main class="single__main main">
-    
-      <nav class="breadcrumb hide" aria-label="breadcrumbs">
+
+<main class="single__main main">
+  
+    <nav class="breadcrumb hide" aria-label="breadcrumbs">
   <script>document.querySelector('.breadcrumb').classList.remove('hide')</script>
   <ol>
     
@@ -1698,15 +1701,15 @@
   </ol>
   
 </nav>
-    
-    
-    <div class="single ">
-      <div class="single__nojs">This page looks best with JavaScript enabled</div>
-      <script>document.querySelector('.single').classList.remove('hide'); document.querySelector('.single__nojs').classList.add('hide');</script>
-      <h2 class="single__title" data-ani="true">Scaling up</h2>
-      <h3 class="single__subtitle"></h3>
-      <div class="single__meta">
-        
+  
+  
+  <div class="single ">
+    <div class="single__nojs">This page looks best with JavaScript enabled</div>
+    <script>document.querySelector('.single').classList.remove('hide'); document.querySelector('.single__nojs').classList.add('hide');</script>
+    <h2 class="single__title" data-ani="true">Scaling up</h2>
+    <h3 class="single__subtitle"></h3>
+    <div class="single__meta">
+      
 <div class="single__infos">
   <time class="single__info" title="Written At">📅&nbsp;Nov 22, 2020 </time>
 
@@ -1729,29 +1732,124 @@
   </span>
 </div>
 
-        <span>
+      <span>
   <ul class="single__tags caption">
     
       🏷️
     
     
-      <li><a href="https://gerkindev.github.io/devblog/tags/kubernetes/" class="single__tag" title="kubernetes">#kubernetes</a></li>
+      <li><a href="https://gerkindev.github.io/devblog/tags/kubernetes/" class="single__tag" title="Kubernetes">#Kubernetes</a></li>
     
       <li><a href="https://gerkindev.github.io/devblog/tags/sysadmin/" class="single__tag" title="Sysadmin">#Sysadmin</a></li>
     
   </ul>
   
 </span>
+    </div>
+    <article class="single__contents" data-dir="ltr" data-ani="true">
+      
+
+
+
+<div class="wrapper__left hide" data-pad="true" dir="ltr">
+    <script>document.querySelector('.wrapper__left').classList.remove('hide')</script>
+    
+      
         
-          <div class="notices info" data-title="Note" style="margin-top: 2rem;">
-            <p>This walkthrough is part of the <a href="https://gerkindev.github.io/devblog/walkthroughs/kubernetes/">Set up a bare-metal kubernetes cluster from scratch</a> walkthroughs serie. If you did not followed previous steps, you might have many things to adapt.</p>
-            <p>You can also check the other steps to see what was done before.</p>
+          <div class="toc__flexbox--outer" data-position="fixed" data-dir="ltr" data-ani="true">
+            <h6 class="toc__title toc__title--outer" data-ani="true">What&#39;s on this Page</h6>
+            
+              <label class="switch" data-ani="true">
+                <input id="visible-toc" aria-label="Visible TOC" type="checkbox" checked>
+                <span class="slider round"></span>
+              </label>
+            
           </div>
-        
-      </div>
-      <article class="single__contents" data-dir="ltr" data-ani="true">
-        
-        <p>Your setup is running, everything runs smoothly, and suddenly, ‼️ nothing is responding: your cluster is overloaded.</p>
+          <div class="toc toc__outer " data-dir="ltr" data-folding="false" data-ani="true">
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#join-the-clusters-vpn">Join the cluster&rsquo;s VPN</a>
+      <ul>
+        <li><a href="#from-the-openvpn-server-node">From the <em>OpenVPN server node</em></a></li>
+        <li><a href="#from-the-new-node">From the new node</a></li>
+      </ul>
+    </li>
+    <li><a href="#join-the-cluster">Join the cluster</a>
+      <ul>
+        <li><a href="#from-any-account-or-node-with-cluster-admin-capabilities">From any account or node with cluster admin capabilities</a></li>
+        <li><a href="#from-the-new-node-1">From the new node</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+          </div>
+      
+    
+  
+</div>
+<script>
+  
+  
+  
+
+  var enableToc = JSON.parse("true");
+  var toc = JSON.parse("null");
+  var tocPosition = JSON.parse("\"outer\"");
+  
+  var singleMainElem = document.querySelector('.single__main');
+  var singleSideElem = document.querySelector('.single__side');
+
+  enquire.register("screen and (max-width: 769px)", {
+    match: function () {
+      if ((enableToc || toc) && tocPosition !== "outer") {
+        if (singleMainElem && singleSideElem) {
+          singleMainElem.classList.remove('main-main');
+          singleMainElem.classList.add('main');
+          singleSideElem.classList.remove('main-side');
+          singleSideElem.classList.add('hide');
+        }
+      } else if (tocPosition === "outer") {
+        if (singleMainElem && !singleMainElem.classList.contains('main-main')) {
+          singleMainElem.classList.remove('main-main');
+          singleMainElem.classList.add('main');
+        }
+        if (singleSideElem && !singleSideElem.classList.contains('hide')) {
+          singleSideElem.classList.add('hide');
+        }
+      }
+    },
+    unmatch: function () {
+      if ((enableToc || toc) && tocPosition !== "outer") {
+        singleMainElem.classList.remove('main');
+        singleMainElem.classList.add('main-main');
+        singleSideElem.classList.remove('hide');
+        singleSideElem.classList.add('main-side');
+      } else if (tocPosition === "outer") {
+        if (singleMainElem && !singleMainElem.classList.contains('main-main')) {
+          singleMainElem.classList.remove('main-main');
+          singleMainElem.classList.add('main');
+        }
+        if (singleSideElem && !singleSideElem.classList.contains('hide')) {
+          singleSideElem.classList.add('hide');
+        }
+      }
+
+      var navCollapseBtn = document.querySelector('.navbar__burger');
+      var navCollapse = document.getElementsByClassName('navbarm__collapse')[0];
+      if (navCollapse) {
+        navCollapse.setAttribute('data-open', false);
+        navCollapse.style.maxHeight = 0;
+        navCollapseBtn.classList.remove('is-active');
+      }
+      document.getElementsByClassName('navbar__menu')[0].classList.remove('is-active');
+      document.getElementsByClassName('mobile-search')[0].classList.add('hide');
+    },
+    setup: function () { },
+    deferSetup: true,
+    destroy: function () { },
+  });
+</script>
+      <p>Your setup is running, everything runs smoothly, and suddenly, ‼️ nothing is responding: your cluster is overloaded.</p>
 <p>Well, I hope you&rsquo;ll expand your cluster capacity before it happens. It&rsquo;s always really bad and stressful to do maintenance because of downtime.</p>
 <p>Hopefully, here comes the real huge advantage of <em>kubernetes</em>: it is meant to scale, up, and down. So, assuming you have followed the full guide so far, let&rsquo;s review together how to add some juice to our cluster ⚡.</p>
 <h2 id="join-the-clusters-vpn">Join the cluster&rsquo;s VPN</h2>
@@ -1769,18 +1867,10 @@
 
 
 
-
-
 <a
     
     
-    >
-
-    
-    <i class="fas fa-tools" title="TODO"></i>
-
-    00 Setup the cluster&rsquo;s VPN
-</a>, we have set up a VPN so that each of our nodes can communicate safely with each others, on their own virtual network across the internet. This comes with the great power of being able to have servers spread all around the globe.</p>
+    ><i class="fas fa-tools" title="TODO"></i>&nbsp;00 Setup the cluster&rsquo;s VPN</a>, we have set up a VPN so that each of our nodes can communicate safely with each others, on their own virtual network across the internet. This comes with the great power of being able to have servers spread all around the globe.</p>
 <h3 id="from-the-openvpn-server-node">From the <em>OpenVPN server node</em></h3>
 <p>So, log in to the <strong>OpenVPN master server</strong>, and run the following to generate a configuration for your brand new machine:</p>
 <div class="highlight"><div class="chroma">
@@ -1865,13 +1955,9 @@ ping -c <span class="m">4</span> 192.168.255.1
 
 
 
-
+<!--  -->
+        
     
-    <!--  -->
-    
-    
-
-
     
         
     
@@ -1884,13 +1970,7 @@ ping -c <span class="m">4</span> 192.168.255.1
 <a
     href="../02-cluster/#join-workers"
     
-    >
-
-    
-    <i class="fas fa-link" title="See on this site"></i>
-
-    02 - Kickstart the cluster
-</a></p>
+    ><i class="fas fa-link" title="See on this site"></i>&nbsp;02 - Kickstart the cluster</a></p>
 <h3 id="from-any-account-or-node-with-cluster-admin-capabilities">From any account or node with cluster admin capabilities</h3>
 <p>Create a new cluster token:</p>
 <div class="highlight"><div class="chroma">
@@ -1909,8 +1989,15 @@ ping -c <span class="m">4</span> 192.168.255.1
     Sample output
   </button>
   <div class="expand__content">
-    <pre><code>kubeadm join 192.168.255.10:6443 --token gmedpt.veqzvuhcazac26gf --discovery-token-ca-cert-hash sha256:cb316693e48403ff18f840d47930f6737744d2ead362838695df3a1e1400cec1
-</code></pre>
+    <div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">kubeadm join 192.168.255.10:6443 --token gmedpt.veqzvuhcazac26gf --discovery-token-ca-cert-hash sha256:cb316693e48403ff18f840d47930f6737744d2ead362838695df3a1e1400cec1
+</code></pre></td></tr></table>
+</div>
+</div>
   </div>
 </div>
 <p>Copy the <code>kubeadm join ...</code> command outputted by the command above.</p>
@@ -1933,11 +2020,28 @@ ping -c <span class="m">4</span> 192.168.255.1
     Sample output
   </button>
   <div class="expand__content">
-    <pre><code>[preflight] Running pre-flight checks
+    <div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">[preflight] Running pre-flight checks
 [preflight] Reading configuration from the cluster...
-[preflight] FYI: You can look at this config file with 'kubectl -n kube-system get cm kubeadm-config -oyaml'
-[kubelet-start] Writing kubelet configuration to file &quot;/var/lib/kubelet/config.yaml&quot;
-[kubelet-start] Writing kubelet environment file with flags to file &quot;/var/lib/kubelet/kubeadm-flags.env&quot;
+[preflight] FYI: You can look at this config file with &#39;kubectl -n kube-system get cm kubeadm-config -oyaml&#39;
+[kubelet-start] Writing kubelet configuration to file &#34;/var/lib/kubelet/config.yaml&#34;
+[kubelet-start] Writing kubelet environment file with flags to file &#34;/var/lib/kubelet/kubeadm-flags.env&#34;
 [kubelet-start] Starting the kubelet
 [kubelet-start] Waiting for the kubelet to perform the TLS Bootstrap...
 ^[[B
@@ -1945,14 +2049,16 @@ This node has joined the cluster:
 * Certificate signing request was sent to apiserver and a response was received.
 * The Kubelet was informed of the new secure connection details.
 
-Run 'kubectl get nodes' on the control-plane to see this node join the cluster.
-</code></pre>
+Run &#39;kubectl get nodes&#39; on the control-plane to see this node join the cluster.
+</code></pre></td></tr></table>
+</div>
+</div>
   </div>
 </div>
 
-      </article>
-      
-      
+    </article>
+    
+    
 <script defer src="https://gerkindev.github.io/devblog/js/clipboard.min.1626706afc88d95ebe1173b553ec732c6dc82a576989315fdf5e7779af738a44.js"></script>
 
 <script defer src="https://gerkindev.github.io/devblog/js/helper/prev.min.js"></script>
@@ -2065,7 +2171,7 @@ Run 'kubectl get nodes' on the control-plane to see this node join the cluster.
     
   });
 </script>
-      <script>
+    <script>
   'use strict';
   
   function wrap(el, wrapper) {
@@ -2138,28 +2244,7 @@ Run 'kubectl get nodes' on the control-plane to see this node join the cluster.
   }) : null;
   
 </script>
-      <div class="grow"></div>
-<nav class="pagination-single">
-  <div class="prev-next">
     
-      
-      <a href="https://gerkindev.github.io/devblog/walkthroughs/kubernetes/09-safe-monitoring/" class="pagination-single__left">      
-        <div class="pagination-single__icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M19 11H7.83l4.88-4.88c.39-.39.39-1.03 0-1.42-.39-.39-1.02-.39-1.41 0l-6.59 6.59c-.39.39-.39 1.02 0 1.41l6.59 6.59c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L7.83 13H19c.55 0 1-.45 1-1s-.45-1-1-1z"/></svg>
-        </div>
-        <div class="pagination-single__left-title">Protect monitoring with authentication</div>
-      </a>
-      
-      <div class="grow"></div>
-      
-    
-  </div>
-  
-  
-    <span class="pagination-single__left-title center">In walkthrough <a href="https://gerkindev.github.io/devblog/walkthroughs/kubernetes/" class="pagination-single__left-title">Set up a bare-metal kubernetes cluster from scratch</a></span>
-  
-</nav>
-      
 <div class="donation">
   <div class="donation__message">
     Share on
@@ -2183,8 +2268,8 @@ Run 'kubectl get nodes' on the control-plane to see this node join the cluster.
   </div>
 </div>
 
-      
-      
+    
+    
 <div class="whoami__gutter"></div>
 <hr class="hr-slash whoami-hr"/>
 <section class="whoami">
@@ -2242,7 +2327,7 @@ Run 'kubectl get nodes' on the control-plane to see this node join the cluster.
 <hr class="hr-slash whoami-hr" />
 
 
-      <section class="related">
+    <section class="related">
     
     
     <h1 class="related__title">
@@ -2255,29 +2340,50 @@ Run 'kubectl get nodes' on the control-plane to see this node join the cluster.
     <ul class="related-ul">
         
         <li>
-          <a href="https://gerkindev.github.io/devblog/walkthroughs/kubernetes/07-authentication/" class="related__link">Setup cluster&#39;s authentication</a>
-        </li>
-        
-        <li>
-          <a href="https://gerkindev.github.io/devblog/walkthroughs/kubernetes/05-storage/" class="related__link">Make things persistent</a>
-        </li>
-        
-        <li>
           <a href="https://gerkindev.github.io/devblog/walkthroughs/kubernetes/09-safe-monitoring/" class="related__link">Protect monitoring with authentication</a>
         </li>
         
         <li>
-          <a href="https://gerkindev.github.io/devblog/walkthroughs/kubernetes/02-cluster/" class="related__link">Kickstart the cluster</a>
+          <a href="https://gerkindev.github.io/devblog/walkthroughs/kubernetes/08-kubernetes-user-management/" class="related__link">Administrate the cluster with authentication</a>
+        </li>
+        
+        <li>
+          <a href="https://gerkindev.github.io/devblog/walkthroughs/kubernetes/00-vpn/" class="related__link">Setup the cluster&#39;s VPN</a>
         </li>
         
         <li>
           <a href="https://gerkindev.github.io/devblog/walkthroughs/kubernetes/01-audit-log/" class="related__link">Setup the cluster&#39;s Audit Log</a>
         </li>
         
+        <li>
+          <a href="https://gerkindev.github.io/devblog/walkthroughs/kubernetes/02-cluster/" class="related__link">Kickstart the cluster</a>
+        </li>
+        
     </ul>
     
   </section>
+    <div class="grow"></div>
+<nav class="pagination-single">
+  <div class="prev-next">
+    
       
+      <a href="https://gerkindev.github.io/devblog/walkthroughs/kubernetes/09-safe-monitoring/" class="pagination-single__left">      
+        <div class="pagination-single__icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M19 11H7.83l4.88-4.88c.39-.39.39-1.03 0-1.42-.39-.39-1.02-.39-1.41 0l-6.59 6.59c-.39.39-.39 1.02 0 1.41l6.59 6.59c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L7.83 13H19c.55 0 1-.45 1-1s-.45-1-1-1z"/></svg>
+        </div>
+        <div class="pagination-single__left-title">Protect monitoring with authentication</div>
+      </a>
+      
+      <div class="grow"></div>
+      
+    
+  </div>
+  
+  
+    <span class="pagination-single__left-title center">In walkthrough <a href="https://gerkindev.github.io/devblog/walkthroughs/kubernetes/" class="pagination-single__left-title">Set up a bare-metal kubernetes cluster from scratch</a></span>
+  
+</nav>
+    
   
     <div id="utterances"></div>
 <noscript>Please enable JavaScript to view the <a href="https://github.com/utterance">comments powered by utterances.</a></noscript>
@@ -2335,7 +2441,7 @@ Run 'kubectl get nodes' on the control-plane to see this node join the cluster.
 
   
 
-      <div class="modal micromodal-slide" id="modal" aria-hidden="true">
+    <div class="modal micromodal-slide" id="modal" aria-hidden="true">
   <div class="modal__overlay" tabindex="-1" data-micromodal-close>
     <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-title">
       
@@ -2648,14 +2754,76 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 </script>
 
-      <div class="hide">
-        
-      </div>
+    <div class="hide">
+      
     </div>
-  </main>
+  </div>
+</main>
 
+
+<script>
   
   
+  
+
+  var enableToc = JSON.parse("true");
+  var toc = JSON.parse("null");
+  var tocPosition = JSON.parse("\"outer\"");
+  
+  var singleMainElem = document.querySelector('.single__main');
+  var singleSideElem = document.querySelector('.single__side');
+
+  enquire.register("screen and (max-width: 769px)", {
+    match: function () {
+      if ((enableToc || toc) && tocPosition !== "outer") {
+        if (singleMainElem && singleSideElem) {
+          singleMainElem.classList.remove('main-main');
+          singleMainElem.classList.add('main');
+          singleSideElem.classList.remove('main-side');
+          singleSideElem.classList.add('hide');
+        }
+      } else if (tocPosition === "outer") {
+        if (singleMainElem && !singleMainElem.classList.contains('main-main')) {
+          singleMainElem.classList.remove('main-main');
+          singleMainElem.classList.add('main');
+        }
+        if (singleSideElem && !singleSideElem.classList.contains('hide')) {
+          singleSideElem.classList.add('hide');
+        }
+      }
+    },
+    unmatch: function () {
+      if ((enableToc || toc) && tocPosition !== "outer") {
+        singleMainElem.classList.remove('main');
+        singleMainElem.classList.add('main-main');
+        singleSideElem.classList.remove('hide');
+        singleSideElem.classList.add('main-side');
+      } else if (tocPosition === "outer") {
+        if (singleMainElem && !singleMainElem.classList.contains('main-main')) {
+          singleMainElem.classList.remove('main-main');
+          singleMainElem.classList.add('main');
+        }
+        if (singleSideElem && !singleSideElem.classList.contains('hide')) {
+          singleSideElem.classList.add('hide');
+        }
+      }
+
+      var navCollapseBtn = document.querySelector('.navbar__burger');
+      var navCollapse = document.getElementsByClassName('navbarm__collapse')[0];
+      if (navCollapse) {
+        navCollapse.setAttribute('data-open', false);
+        navCollapse.style.maxHeight = 0;
+        navCollapseBtn.classList.remove('is-active');
+      }
+      document.getElementsByClassName('navbar__menu')[0].classList.remove('is-active');
+      document.getElementsByClassName('mobile-search')[0].classList.add('hide');
+    },
+    setup: function () { },
+    deferSetup: true,
+    destroy: function () { },
+  });
+</script>
+
 
 
 
@@ -3206,7 +3374,6 @@ document.addEventListener('DOMContentLoaded', function () {
 </footer>
         </div>
         
-    
 
 
 
@@ -3317,12 +3484,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 </script>
 
-
     </div>
     
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/findAndReplaceDOMText/0.4.6/findAndReplaceDOMText.min.js" integrity="sha512-KJxyO81TRgb6HTSjpLHhJgOJMCuBkQtmH/ODpfAcqSOpNX3nnU5Hefbb5MZ3SwaSlFwCn+mwdg1466XEVv4Rew==" crossorigin="anonymous"></script>
-    <script src="https://gerkindev.github.io/devblog/scripts/vars.min.dfe94640aa013d15440440a68bb40cc83b4e449ade113e6fe57c3de27bc9b7e8.js"></script>
-
 </body>
 </html>

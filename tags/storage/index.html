@@ -1334,7 +1334,7 @@
 
 
 <meta name="created" content="2020-11-16T02:35:47&#43;0100">
-<meta name="modified" content="2021-02-01T19:47:58&#43;0100">
+<meta name="modified" content="2021-02-16T12:06:38&#43;0100">
 <meta property="article:published_time" content="2020-11-16T02:35:47&#43;0100">
 
 <meta name="author" content="GerkinDev">
@@ -1423,6 +1423,16 @@
 
 
 
+
+
+
+  
+
+
+
+<div class="wrapper__left hide" data-pad="true" dir="ltr">
+  
+</div>
 
         <div class="wrapper" data-type="tags" data-kind="term">
             <nav class="navbar scrolling" role="navigation" aria-label="main navigation" data-dir="ltr">
@@ -1649,16 +1659,16 @@
         <h6 class="subtitle caption">
           <time title="Written At" dir="ltr">📅&nbsp;Nov 16, 2020 </time>
           
-          <time title="Modified At" dir="ltr"> &middot; 📝&nbsp;Feb 1, 2021 </time>
+          <time title="Modified At" dir="ltr"> &middot; 📝&nbsp;Feb 16, 2021 </time>
           
-          <span title="Reading Time" dir="ltr"> &middot; ☕&nbsp;2&nbsp;min read </span>
+          <span title="Reading Time" dir="ltr"> &middot; ☕&nbsp;5&nbsp;min read </span>
           
         </h6>
       </header>
       <div>
         <div class="summary-classic__text p2">
           
-            References   📖 persistent volume https://www.youtube.com/watch?v=0swOh5C3OVM    As you may know, docker (and thus, kubernetes) does not persist anything by default. That means that everytime you restart a pod (container), it is in the exact same state as it was at its first execution, except for the mount points. Those mount points are real hard drive directories injected into your pod. Some apps we&rsquo;ll setup later will require to persist data, and, more generally, when you&rsquo;ll run real applications on your own, they will probably use a database or something.
+            References   Persistent Volume Dynamic Volume Provisioning Storage Classes https://www.youtube.com/watch?v=0swOh5C3OVM    As you may know, docker (and thus, kubernetes) does not persist anything by default. That means that everytime you restart a pod (container), it is in the exact same state as it was at its first execution, except for the mount points. Those mount points are real hard drive directories injected into your pod. Some apps we&rsquo;ll setup later will require to persist data, and, more generally, when you&rsquo;ll run real applications on your own, they will probably use a database or something.
           
         </div>
       </div>
@@ -1752,9 +1762,22 @@
         
         
             <span class="tag">
+                <a href="https://gerkindev.github.io/devblog/tags/firewall/" class="is-tags taxo__link" data-dir="ltr">
+                    <span class="taxo__text">
+                        Firewall
+                    </span>
+                    <span class="taxo__num" dir="auto">
+                        1
+                    </span>
+                </a>
+            </span>
+        
+        
+        
+            <span class="tag">
                 <a href="https://gerkindev.github.io/devblog/tags/kubernetes/" class="is-tags taxo__link" data-dir="ltr">
                     <span class="taxo__text">
-                        kubernetes
+                        Kubernetes
                     </span>
                     <span class="taxo__num" dir="auto">
                         13
@@ -1796,7 +1819,7 @@
                         Security
                     </span>
                     <span class="taxo__num" dir="auto">
-                        4
+                        5
                     </span>
                 </a>
             </span>
@@ -1822,7 +1845,20 @@
                         Sysadmin
                     </span>
                     <span class="taxo__num" dir="auto">
-                        12
+                        13
+                    </span>
+                </a>
+            </span>
+        
+        
+        
+            <span class="tag">
+                <a href="https://gerkindev.github.io/devblog/tags/troubleshooting/" class="is-tags taxo__link" data-dir="ltr">
+                    <span class="taxo__text">
+                        Troubleshooting
+                    </span>
+                    <span class="taxo__num" dir="auto">
+                        1
                     </span>
                 </a>
             </span>
@@ -1861,7 +1897,7 @@
                         Kubernetes
                     </span>
                     <span class="taxo__num" dir="auto">
-                        12
+                        13
                     </span>
                 </a>
             </span>
@@ -2047,10 +2083,78 @@
 
 
 
-<div class="wrapper__right hide" data-pad="true" dir="ltr">
-  <script>document.querySelector('.wrapper__right').classList.remove('hide')</script>
+
+
   
+
+
+
+<div class="wrapper__right hide" data-pad="true" dir="ltr">
+    <script>document.querySelector('.wrapper__right').classList.remove('hide')</script>
+    
 </div>
+<script>
+  
+  
+  
+
+  var enableToc = JSON.parse("true");
+  var toc = JSON.parse("null");
+  var tocPosition = JSON.parse("\"outer\"");
+  
+  var singleMainElem = document.querySelector('.single__main');
+  var singleSideElem = document.querySelector('.single__side');
+
+  enquire.register("screen and (max-width: 769px)", {
+    match: function () {
+      if ((enableToc || toc) && tocPosition !== "outer") {
+        if (singleMainElem && singleSideElem) {
+          singleMainElem.classList.remove('main-main');
+          singleMainElem.classList.add('main');
+          singleSideElem.classList.remove('main-side');
+          singleSideElem.classList.add('hide');
+        }
+      } else if (tocPosition === "outer") {
+        if (singleMainElem && !singleMainElem.classList.contains('main-main')) {
+          singleMainElem.classList.remove('main-main');
+          singleMainElem.classList.add('main');
+        }
+        if (singleSideElem && !singleSideElem.classList.contains('hide')) {
+          singleSideElem.classList.add('hide');
+        }
+      }
+    },
+    unmatch: function () {
+      if ((enableToc || toc) && tocPosition !== "outer") {
+        singleMainElem.classList.remove('main');
+        singleMainElem.classList.add('main-main');
+        singleSideElem.classList.remove('hide');
+        singleSideElem.classList.add('main-side');
+      } else if (tocPosition === "outer") {
+        if (singleMainElem && !singleMainElem.classList.contains('main-main')) {
+          singleMainElem.classList.remove('main-main');
+          singleMainElem.classList.add('main');
+        }
+        if (singleSideElem && !singleSideElem.classList.contains('hide')) {
+          singleSideElem.classList.add('hide');
+        }
+      }
+
+      var navCollapseBtn = document.querySelector('.navbar__burger');
+      var navCollapse = document.getElementsByClassName('navbarm__collapse')[0];
+      if (navCollapse) {
+        navCollapse.setAttribute('data-open', false);
+        navCollapse.style.maxHeight = 0;
+        navCollapseBtn.classList.remove('is-active');
+      }
+      document.getElementsByClassName('navbar__menu')[0].classList.remove('is-active');
+      document.getElementsByClassName('mobile-search')[0].classList.add('hide');
+    },
+    setup: function () { },
+    deferSetup: true,
+    destroy: function () { },
+  });
+</script>
 
     </div>
     

@@ -12,7 +12,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>©{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Sun, 22 Nov 2020 04:03:47 +0100</lastBuildDate>
+    <lastBuildDate>Tue, 02 Feb 2021 00:16:48 +0100</lastBuildDate>
     
         <atom:link href="https://gerkindev.github.io/devblog/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -21,12 +21,30 @@
 
       
       <item>
-        <title>kubernetes</title>
-        <link>https://gerkindev.github.io/devblog/tags/kubernetes/</link>
-        <pubDate>Sun, 22 Nov 2020 04:03:47 +0100</pubDate>
+        <title>Firewall</title>
+        <link>https://gerkindev.github.io/devblog/tags/firewall/</link>
+        <pubDate>Tue, 02 Feb 2021 00:16:48 +0100</pubDate>
         
         
-        <guid>https://gerkindev.github.io/devblog/tags/kubernetes/</guid>
+        <guid>https://gerkindev.github.io/devblog/tags/firewall/</guid>
+        <description></description>
+        
+        <dc:creator>GerkinDev</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Security</title>
+        <link>https://gerkindev.github.io/devblog/tags/security/</link>
+        <pubDate>Tue, 02 Feb 2021 00:16:48 +0100</pubDate>
+        
+        
+        <guid>https://gerkindev.github.io/devblog/tags/security/</guid>
         <description></description>
         
         <dc:creator>GerkinDev</dc:creator>
@@ -41,10 +59,46 @@
       <item>
         <title>Sysadmin</title>
         <link>https://gerkindev.github.io/devblog/tags/sysadmin/</link>
-        <pubDate>Sun, 22 Nov 2020 04:03:47 +0100</pubDate>
+        <pubDate>Tue, 02 Feb 2021 00:16:48 +0100</pubDate>
         
         
         <guid>https://gerkindev.github.io/devblog/tags/sysadmin/</guid>
+        <description></description>
+        
+        <dc:creator>GerkinDev</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Troubleshooting</title>
+        <link>https://gerkindev.github.io/devblog/tags/troubleshooting/</link>
+        <pubDate>Tue, 02 Feb 2021 00:16:48 +0100</pubDate>
+        
+        
+        <guid>https://gerkindev.github.io/devblog/tags/troubleshooting/</guid>
+        <description></description>
+        
+        <dc:creator>GerkinDev</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Kubernetes</title>
+        <link>https://gerkindev.github.io/devblog/tags/kubernetes/</link>
+        <pubDate>Sun, 22 Nov 2020 04:03:47 +0100</pubDate>
+        
+        
+        <guid>https://gerkindev.github.io/devblog/tags/kubernetes/</guid>
         <description></description>
         
         <dc:creator>GerkinDev</dc:creator>
@@ -117,24 +171,6 @@
         
         
         <guid>https://gerkindev.github.io/devblog/tags/networking/</guid>
-        <description></description>
-        
-        <dc:creator>GerkinDev</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>Security</title>
-        <link>https://gerkindev.github.io/devblog/tags/security/</link>
-        <pubDate>Mon, 16 Nov 2020 02:35:47 +0100</pubDate>
-        
-        
-        <guid>https://gerkindev.github.io/devblog/tags/security/</guid>
         <description></description>
         
         <dc:creator>GerkinDev</dc:creator>

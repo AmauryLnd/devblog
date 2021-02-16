@@ -1424,6 +1424,16 @@
 
 
 
+
+
+  
+
+
+
+<div class="wrapper__left hide" data-pad="false" dir="ltr">
+  
+</div>
+
         <div class="wrapper" data-type="series" data-kind="taxonomy">
             <nav class="navbar scrolling" role="navigation" aria-label="main navigation" data-dir="ltr">
   <div class="navbar__brand">
@@ -1698,10 +1708,78 @@
 
 
 
-<div class="wrapper__right hide" data-pad="false" dir="ltr">
-  <script>document.querySelector('.wrapper__right').classList.remove('hide')</script>
+
+
   
+
+
+
+<div class="wrapper__right hide" data-pad="false" dir="ltr">
+    <script>document.querySelector('.wrapper__right').classList.remove('hide')</script>
+    
 </div>
+<script>
+  
+  
+  
+
+  var enableToc = JSON.parse("true");
+  var toc = JSON.parse("null");
+  var tocPosition = JSON.parse("\"outer\"");
+  
+  var singleMainElem = document.querySelector('.single__main');
+  var singleSideElem = document.querySelector('.single__side');
+
+  enquire.register("screen and (max-width: 769px)", {
+    match: function () {
+      if ((enableToc || toc) && tocPosition !== "outer") {
+        if (singleMainElem && singleSideElem) {
+          singleMainElem.classList.remove('main-main');
+          singleMainElem.classList.add('main');
+          singleSideElem.classList.remove('main-side');
+          singleSideElem.classList.add('hide');
+        }
+      } else if (tocPosition === "outer") {
+        if (singleMainElem && !singleMainElem.classList.contains('main-main')) {
+          singleMainElem.classList.remove('main-main');
+          singleMainElem.classList.add('main');
+        }
+        if (singleSideElem && !singleSideElem.classList.contains('hide')) {
+          singleSideElem.classList.add('hide');
+        }
+      }
+    },
+    unmatch: function () {
+      if ((enableToc || toc) && tocPosition !== "outer") {
+        singleMainElem.classList.remove('main');
+        singleMainElem.classList.add('main-main');
+        singleSideElem.classList.remove('hide');
+        singleSideElem.classList.add('main-side');
+      } else if (tocPosition === "outer") {
+        if (singleMainElem && !singleMainElem.classList.contains('main-main')) {
+          singleMainElem.classList.remove('main-main');
+          singleMainElem.classList.add('main');
+        }
+        if (singleSideElem && !singleSideElem.classList.contains('hide')) {
+          singleSideElem.classList.add('hide');
+        }
+      }
+
+      var navCollapseBtn = document.querySelector('.navbar__burger');
+      var navCollapse = document.getElementsByClassName('navbarm__collapse')[0];
+      if (navCollapse) {
+        navCollapse.setAttribute('data-open', false);
+        navCollapse.style.maxHeight = 0;
+        navCollapseBtn.classList.remove('is-active');
+      }
+      document.getElementsByClassName('navbar__menu')[0].classList.remove('is-active');
+      document.getElementsByClassName('mobile-search')[0].classList.add('hide');
+    },
+    setup: function () { },
+    deferSetup: true,
+    destroy: function () { },
+  });
+</script>
 
     </div>
     

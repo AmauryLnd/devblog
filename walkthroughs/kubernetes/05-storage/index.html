@@ -1334,7 +1334,7 @@
 <meta name="keywords" content="Kubernetes,Sysadmin,DevOps,Storage">
 
 <meta name="created" content="2020-11-16T02:35:47&#43;0100">
-<meta name="modified" content="2021-02-01T19:47:58&#43;0100">
+<meta name="modified" content="2021-02-16T12:06:38&#43;0100">
 <meta property="article:published_time" content="2020-11-16T02:35:47&#43;0100">
 
 <meta name="author" content="GerkinDev">
@@ -1383,9 +1383,9 @@
     "@type": "WebPage",
     "headline": "Make things persistent",
     "datePublished": "2020-11-16T02:35:47+01:00",
-    "dateModified": "2021-02-01T19:47:58+01:00",
+    "dateModified": "2021-02-16T12:06:38+01:00",
     "url" : "https://gerkindev.github.io/devblog/walkthroughs/kubernetes/05-storage/",
-    "description": "References   📖 persistent volume https://www.youtube.com/watch?v=0swOh5C3OVM    As you may know, docker (and thus, kubernetes) does not persist anything by default. That …",
+    "description": "References   Persistent Volume Dynamic Volume Provisioning Storage Classes https://www.youtube.com/watch?v=0swOh5C3OVM    As you may know, docker (and thus, kubernetes) …",
     "keywords": ["Kubernetes","Sysadmin","DevOps","Storage"],
     "mainEntityOfPage": {
       "@type": "WebPage",
@@ -1422,7 +1422,6 @@
     </script>
     <div id="container">
         
-    
 
 
 
@@ -1435,9 +1434,12 @@
 
 
 <div class="wrapper__left hide" data-pad="true" dir="ltr">
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/findAndReplaceDOMText/0.4.6/findAndReplaceDOMText.min.js" integrity="sha512-KJxyO81TRgb6HTSjpLHhJgOJMCuBkQtmH/ODpfAcqSOpNX3nnU5Hefbb5MZ3SwaSlFwCn+mwdg1466XEVv4Rew==" crossorigin="anonymous" defer></script>
+  <script src="https://gerkindev.github.io/devblog/scripts/vars.min.8c63757b96db9185559c4edb2a83c61b693a825e31b6adb640e8dde215aa150c.js" defer></script>
   <script>document.querySelector('.wrapper__left').classList.remove('hide')</script>
   <div class="toc__flexbox--outer" data-position="fixed" data-dir="ltr" data-ani="true">
-    <h6 class="toc__title toc__title--outer" data-ani="true">Walkthrough help</h6>
+    <h6 class="toc__title toc__title--outer" data-ani="true">Help</h6>
     
     <label class="switch" data-ani="true">
       <input id="visible-help" aria-label="Visible help" type="checkbox" checked>
@@ -1475,8 +1477,8 @@
       </table>
     </section>
   </div>
+  
 </div>
-
 
         <div class="wrapper" data-type="walkthroughs" data-kind="page">
             <nav class="navbar scrolling" role="navigation" aria-label="main navigation" data-dir="ltr">
@@ -1655,9 +1657,10 @@
 
 
             
-  <main class="single__main main">
-    
-      <nav class="breadcrumb hide" aria-label="breadcrumbs">
+
+<main class="single__main main">
+  
+    <nav class="breadcrumb hide" aria-label="breadcrumbs">
   <script>document.querySelector('.breadcrumb').classList.remove('hide')</script>
   <ol>
     
@@ -1698,29 +1701,29 @@
   </ol>
   
 </nav>
-    
-    
-    <div class="single ">
-      <div class="single__nojs">This page looks best with JavaScript enabled</div>
-      <script>document.querySelector('.single').classList.remove('hide'); document.querySelector('.single__nojs').classList.add('hide');</script>
-      <h2 class="single__title" data-ani="true">Make things persistent</h2>
-      <h3 class="single__subtitle"></h3>
-      <div class="single__meta">
-        
+  
+  
+  <div class="single ">
+    <div class="single__nojs">This page looks best with JavaScript enabled</div>
+    <script>document.querySelector('.single').classList.remove('hide'); document.querySelector('.single__nojs').classList.add('hide');</script>
+    <h2 class="single__title" data-ani="true">Make things persistent</h2>
+    <h3 class="single__subtitle"></h3>
+    <div class="single__meta">
+      
 <div class="single__infos">
   <time class="single__info" title="Written At">📅&nbsp;Nov 16, 2020 </time>
 
   
-    &nbsp;&middot;&nbsp; <time class="single__info" title="Modified At"> 📝&nbsp;Feb 1, 2021 </time> 
+    &nbsp;&middot;&nbsp; <time class="single__info" title="Modified At"> 📝&nbsp;Feb 16, 2021 </time> 
   
 
   
   
   
-    via commit&nbsp;<a href="https://github.com/GerkinDev/devblog/commit/367f1f5c974d3eb08f3968b7523b7c1ff2ab44ff" target="_blank"><code>367f1f5</code> (<em>Fix dead links &amp; retry circleci build</em>) by GerkinDev</a>
+    via commit&nbsp;<a href="https://github.com/GerkinDev/devblog/commit/0a6b2c92a587ecc704887f33e271483634185ee3" target="_blank"><code>0a6b2c9</code> (<em>feat: update the bare-metal kubernetes walkthrough</em>) by GerkinDev</a>
   
 
-  &nbsp;&middot;&nbsp; <span class="single__info" title="Reading Time"> ☕&nbsp;2&nbsp;min read </span>
+  &nbsp;&middot;&nbsp; <span class="single__info" title="Reading Time"> ☕&nbsp;5&nbsp;min read </span>
 
   
   
@@ -1729,13 +1732,13 @@
   </span>
 </div>
 
-        <span>
+      <span>
   <ul class="single__tags caption">
     
       🏷️
     
     
-      <li><a href="https://gerkindev.github.io/devblog/tags/kubernetes/" class="single__tag" title="kubernetes">#kubernetes</a></li>
+      <li><a href="https://gerkindev.github.io/devblog/tags/kubernetes/" class="single__tag" title="Kubernetes">#Kubernetes</a></li>
     
       <li><a href="https://gerkindev.github.io/devblog/tags/sysadmin/" class="single__tag" title="Sysadmin">#Sysadmin</a></li>
     
@@ -1746,16 +1749,107 @@
   </ul>
   
 </span>
+    </div>
+    <article class="single__contents" data-dir="ltr" data-ani="true">
+      
+
+
+
+<div class="wrapper__left hide" data-pad="true" dir="ltr">
+    <script>document.querySelector('.wrapper__left').classList.remove('hide')</script>
+    
+      
         
-          <div class="notices info" data-title="Note" style="margin-top: 2rem;">
-            <p>This walkthrough is part of the <a href="https://gerkindev.github.io/devblog/walkthroughs/kubernetes/">Set up a bare-metal kubernetes cluster from scratch</a> walkthroughs serie. If you did not followed previous steps, you might have many things to adapt.</p>
-            <p>You can also check the other steps to see what was done before.</p>
+          <div class="toc__flexbox--outer" data-position="fixed" data-dir="ltr" data-ani="true">
+            <h6 class="toc__title toc__title--outer" data-ani="true">What&#39;s on this Page</h6>
+            
+              <label class="switch" data-ani="true">
+                <input id="visible-toc" aria-label="Visible TOC" type="checkbox" checked>
+                <span class="slider round"></span>
+              </label>
+            
           </div>
-        
-      </div>
-      <article class="single__contents" data-dir="ltr" data-ani="true">
-        
-        <div class="expand">
+          <div class="toc toc__outer " data-dir="ltr" data-folding="false" data-ani="true">
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#setup-cephfs">Setup CephFS</a>
+      <ul>
+        <li><a href="#check-prerequisites">Check prerequisites</a></li>
+        <li><a href="#configure-the-rook-cluster">Configure the rook cluster</a></li>
+        <li><a href="#create-a-test-pvc">Create a test PVC</a></li>
+        <li><a href="#dashboard">Dashboard</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+          </div>
+      
+    
+  
+</div>
+<script>
+  
+  
+  
+
+  var enableToc = JSON.parse("true");
+  var toc = JSON.parse("null");
+  var tocPosition = JSON.parse("\"outer\"");
+  
+  var singleMainElem = document.querySelector('.single__main');
+  var singleSideElem = document.querySelector('.single__side');
+
+  enquire.register("screen and (max-width: 769px)", {
+    match: function () {
+      if ((enableToc || toc) && tocPosition !== "outer") {
+        if (singleMainElem && singleSideElem) {
+          singleMainElem.classList.remove('main-main');
+          singleMainElem.classList.add('main');
+          singleSideElem.classList.remove('main-side');
+          singleSideElem.classList.add('hide');
+        }
+      } else if (tocPosition === "outer") {
+        if (singleMainElem && !singleMainElem.classList.contains('main-main')) {
+          singleMainElem.classList.remove('main-main');
+          singleMainElem.classList.add('main');
+        }
+        if (singleSideElem && !singleSideElem.classList.contains('hide')) {
+          singleSideElem.classList.add('hide');
+        }
+      }
+    },
+    unmatch: function () {
+      if ((enableToc || toc) && tocPosition !== "outer") {
+        singleMainElem.classList.remove('main');
+        singleMainElem.classList.add('main-main');
+        singleSideElem.classList.remove('hide');
+        singleSideElem.classList.add('main-side');
+      } else if (tocPosition === "outer") {
+        if (singleMainElem && !singleMainElem.classList.contains('main-main')) {
+          singleMainElem.classList.remove('main-main');
+          singleMainElem.classList.add('main');
+        }
+        if (singleSideElem && !singleSideElem.classList.contains('hide')) {
+          singleSideElem.classList.add('hide');
+        }
+      }
+
+      var navCollapseBtn = document.querySelector('.navbar__burger');
+      var navCollapse = document.getElementsByClassName('navbarm__collapse')[0];
+      if (navCollapse) {
+        navCollapse.setAttribute('data-open', false);
+        navCollapse.style.maxHeight = 0;
+        navCollapseBtn.classList.remove('is-active');
+      }
+      document.getElementsByClassName('navbar__menu')[0].classList.remove('is-active');
+      document.getElementsByClassName('mobile-search')[0].classList.add('hide');
+    },
+    setup: function () { },
+    deferSetup: true,
+    destroy: function () { },
+  });
+</script>
+      <div class="expand">
   <button type="button" class="expand__button" aria-label="Expand Button">
     <span class="expand-icon expand-icon__right">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M9.29 15.88L13.17 12 9.29 8.12c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0l4.59 4.59c.39.39.39 1.02 0 1.41L10.7 17.3c-.39.39-1.02.39-1.41 0-.38-.39-.39-1.03 0-1.42z"/></svg>
@@ -1764,16 +1858,17 @@
   </button>
   <div class="expand__content">
     <ul>
-<li><a href="https://kubernetes.io/docs/concepts/storage/persistent-volumes/">📖 persistent volume</a></li>
+<li><a href="https://kubernetes.io/docs/concepts/storage/persistent-volumes/">Persistent Volume</a></li>
+<li><a href="https://kubernetes.io/docs/concepts/storage/dynamic-provisioning/">Dynamic Volume Provisioning</a></li>
+<li><a href="https://kubernetes.io/docs/concepts/storage/storage-classes/">Storage Classes</a></li>
 <li><a href="https://www.youtube.com/watch?v=0swOh5C3OVM">https://www.youtube.com/watch?v=0swOh5C3OVM</a></li>
 </ul>
 
   </div>
 </div>
-<p>As you may know, docker (and thus, kubernetes) does not persist anything by default. That means that everytime you restart a pod (container), it is in the exact same state as it was at its first execution, except for the mount points. Those mount points are real hard drive directories injected into your pod. Some apps we&rsquo;ll setup later will require to persist data, and, more generally, when you&rsquo;ll run real applications on your own, they will probably use a database or something.</p>
+<p>As you may know, <em>docker</em> (and thus, <em>kubernetes</em>) does not persist anything by default. That means that everytime you restart a pod (container), it is in the exact same state as it was at its first execution, except for the mount points. Those mount points are real hard drive directories injected into your pod. Some apps we&rsquo;ll setup later will require to persist data, and, more generally, when you&rsquo;ll run real applications on your own, they will probably use a database or something.</p>
 <blockquote>
 <p>Seeing how this part is highly tied with your specific setup, you <strong>should really</strong> do this part by yourself using the references above. But in case you want a basic thing working, I&rsquo;ll guide you through the setup of 
-
 
 
 
@@ -1793,13 +1888,7 @@
 <a
     href=""
     
-    >
-
-    
-    <i class="fas fa-link" title="See on this site"></i>
-
-    CephFS
-</a>.</p>
+    ><i class="fas fa-link" title="See on this site"></i>&nbsp;CephFS</a>.</p>
 <p>❗ I repeat myself, but you <strong>should really</strong> do this part by yourself. <strong>Do not</strong> use those as-is if you are using your cluster to host real applications. But just like you, I&rsquo;m doing tests here and I am tired of walking around the whole internet just to experiment a few things.</p>
 </blockquote>
 <p>Now that I&rsquo;ve warned you enough (just look above, <strong>again</strong>), let&rsquo;s declare a 
@@ -1811,33 +1900,46 @@
 
 
 
-
-    
-    <!-- kubernetes.io -->
-    
-    
+<!-- kubernetes.io -->
+        
+            
         
     
-
-
 
 
 
 <a
     href="https://kubernetes.io/docs/concepts/storage/persistent-volumes/"
     
-     target="_blank" rel="noopener noreferrer">
+     target="_blank" rel="noopener noreferrer"><i class="fas fa-book" title="See the docs"></i>&nbsp;persistent volume</a> !</p>
+<h2 id="setup-cephfs">Setup CephFS</h2>
+<h3 id="check-prerequisites">Check prerequisites</h3>
+<p><div class="expand">
+  <button type="button" class="expand__button" aria-label="Expand Button">
+    <span class="expand-icon expand-icon__right">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M9.29 15.88L13.17 12 9.29 8.12c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0l4.59 4.59c.39.39.39 1.02 0 1.41L10.7 17.3c-.39.39-1.02.39-1.41 0-.38-.39-.39-1.03 0-1.42z"/></svg>
+    </span>
+    References
+  </button>
+  <div class="expand__content">
+    <ul>
+<li><a href="https://rook.io/docs/rook/v1.5/ceph-prerequisites.html">https://rook.io/docs/rook/v1.5/ceph-prerequisites.html</a></li>
+</ul>
 
-    
-    <i class="fas fa-book" title="See the docs"></i>
-
-    📖 persistent volume
-</a> !</p>
-<p>The persistent volume we are about to initiate here is a <em>NFS</em> (<em>N</em>etwork <em>F</em>ile<em>S</em>ystem), that will be hosted on our master. You are totally free to host it on either one of your slave or another device outside your cluster.</p>
-<p><a href="https://rook.io/docs/rook/v1.4/ceph-prerequisites.html">https://rook.io/docs/rook/v1.4/ceph-prerequisites.html</a><br />
-<a href="https://rook.io/docs/rook/v1.4/k8s-pre-reqs.html">https://rook.io/docs/rook/v1.4/k8s-pre-reqs.html</a><br />
-<a href="https://rook.io/docs/rook/v1.4/ceph-quickstart.html">https://rook.io/docs/rook/v1.4/ceph-quickstart.html</a></p>
+  </div>
+</div>}}</p>
+<p><a href="https://rook.io/docs/rook/v1.5/k8s-pre-reqs.html">https://rook.io/docs/rook/v1.5/k8s-pre-reqs.html</a><br />
+<a href="https://rook.io/docs/rook/v1.5/ceph-quickstart.html">https://rook.io/docs/rook/v1.5/ceph-quickstart.html</a></p>
+<!-- TODO: Mention in intro about free disk -->
 <div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh">dnf install -y lvm2
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
@@ -1849,8 +1951,16 @@
 <span class="nb">echo</span> <span class="s2">&#34;rbd&#34;</span> &gt; /etc/modules-load.d/cephfs.conf
 </code></pre></td></tr></table>
 </div>
+</div><p>Make sure you have at least one unused partition or filesystem.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh">lsblk -f
+</code></pre></td></tr></table>
+</div>
 </div><p><a href="https://rook.io/docs/rook/v1.5/ceph-quickstart.html#tldr">https://rook.io/docs/rook/v1.5/ceph-quickstart.html#tldr</a></p>
-<p>I use version 1.5-beta.0 because it is the oldest supporting kubernetes v1.19.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -1859,17 +1969,479 @@
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh">git clone --single-branch --branch v1.5.0-beta.0 https://github.com/rook/rook.git
-<span class="nb">cd</span> rook/cluster/examples/kubernetes/ceph
-kubectl create -f common.yaml
-kubectl create -f operator.yaml
-kubectl create -f cluster.yaml
-kubectl apply -f dashboard-external-http.yaml
+<pre class="chroma"><code class="language-sh" data-lang="sh">mkdir -p ./kubernetes/rook/storageclass
+git clone --single-branch --branch v1.5.6 https://github.com/rook/rook.git ~/rook
+cp ~/rook/cluster/examples/kubernetes/ceph/<span class="o">{</span>crds,common,operator,cluster<span class="o">}</span>.yaml ./kubernetes/rook
+<span class="c1"># The FileSystem configuration</span>
+cp ~/rook/cluster/examples/kubernetes/ceph/filesystem.yaml ./kubernetes/rook/filesystem.yaml
+<span class="c1"># Filesystem storage class base config. See https://rook.io/docs/rook/v1.5/ceph-filesystem.html</span>
+cp ~/rook/cluster/examples/kubernetes/ceph/csi/cephfs/storageclass.yaml ./kubernetes/rook/storageclass/filesystem.yaml
+<span class="c1"># Block storage class base config. See https://rook.io/docs/rook/v1.5/ceph-block.html</span>
+cp ~/rook/cluster/examples/kubernetes/ceph/csi/rbd/storageclass.yaml ./kubernetes/rook/storageclass/block.yaml
 </code></pre></td></tr></table>
 </div>
-</div><p>If you made errors and want to purge rook-ceph, remove following patterns <strong>on each nodes</strong> running cephfs (usually, all the worker nodes):</p>
+</div><p>Take some time to RTFM and configure <code>operator</code>, <code>cluster</code>, <code>filesystem</code>, <code>storageclass/filesystem</code> &amp; <code>storageclass/block</code>.</p>
+<p>Want to store on your <code>master</code> node ? Update the discover tolerations to be scheduled on the <code>master</code> node by modifying <code>./kubernetes/rook/operator.yaml</code> like below</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="c"># ...</span><span class="w">
+</span><span class="w"></span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l">CephCluster</span><span class="w">
+</span><span class="w"></span><span class="nt">metadata</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">rook-ceph</span><span class="w">
+</span><span class="w"></span><span class="nt">spec</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="nt">placement</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">all</span><span class="p">:</span><span class="w"> 
+</span><span class="w">      </span><span class="nt">tolerations</span><span class="p">:</span><span class="w">
+</span><span class="w">        </span>- <span class="nt">effect</span><span class="p">:</span><span class="w"> </span><span class="l">NoSchedule</span><span class="w">
+</span><span class="w">          </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l">node-role.kubernetes.io/controlplane</span><span class="w">
+</span><span class="w">          </span><span class="nt">operator</span><span class="p">:</span><span class="w"> </span><span class="l">Exists</span><span class="w">
+</span><span class="w">        </span>- <span class="nt">effect</span><span class="p">:</span><span class="w"> </span><span class="l">NoSchedule</span><span class="w">
+</span><span class="w">          </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l">node-role.kubernetes.io/master</span><span class="w">
+</span><span class="w">          </span><span class="nt">operator</span><span class="p">:</span><span class="w"> </span><span class="l">Exists</span><span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh">kubectl apply -f ./kubernetes/rook/crds.yaml
+kubectl apply -f ./kubernetes/rook/common.yaml
+kubectl apply -f ./kubernetes/rook/operator.yaml
+kubectl apply -f ./kubernetes/rook/cluster.yaml
+kubectl apply -f ./kubernetes/rook/filesystem.yaml
+kubectl apply -f ./kubernetes/rook/storageclass/block.yaml
+kubectl apply -f ./kubernetes/rook/storageclass/filesystem.yaml
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="configure-the-rook-cluster">Configure the rook cluster</h3>
+<p>Open your <code>./kubernetes/rook/cluster.yaml</code> file for further customization.</p>
+<ul>
+<li>The default settings save <em>rook</em> data in <code>/var/lib/rook</code>. This can be changed by setting <code>dataDirHostPath</code>.</li>
+<li>If working with 1 or 2 workers, make sure that <code>spec.mon.count</code> is equal to <code>1</code> (<strong>only for testing purposes</strong>).</li>
+<li>It is highly advised to explicitly set <code>spec.storage</code></li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh">kubectl apply -f ./kubernetes/rook/cluster.yaml
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="create-a-test-pvc">Create a test PVC</h3>
+
+
+
+
+
+
+
+
+
+
+
+<!-- Include code file `./kubernetes/rook/xx-PersistentNginx.yaml` with lang `yaml` & label `./kubernetes/rook/xx-PersistentNginx.yaml` -->
+<section class="included-file" data-file="./kubernetes/rook/xx-PersistentNginx.yaml"><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span><span class="lnt">71
+</span><span class="lnt">72
+</span><span class="lnt">73
+</span><span class="lnt">74
+</span><span class="lnt">75
+</span><span class="lnt">76
+</span><span class="lnt">77
+</span><span class="lnt">78
+</span><span class="lnt">79
+</span><span class="lnt">80
+</span><span class="lnt">81
+</span><span class="lnt">82
+</span><span class="lnt">83
+</span><span class="lnt">84
+</span><span class="lnt">85
+</span><span class="lnt">86
+</span><span class="lnt">87
+</span><span class="lnt">88
+</span><span class="lnt">89
+</span><span class="lnt">90
+</span><span class="lnt">91
+</span><span class="lnt">92
+</span><span class="lnt">93
+</span><span class="lnt">94
+</span><span class="lnt">95
+</span><span class="lnt">96
+</span><span class="lnt">97
+</span><span class="lnt">98
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-yaml:./kubernetes/rook/xx-PersistentNginx.yaml" data-lang="yaml:./kubernetes/rook/xx-PersistentNginx.yaml"><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l">v1</span><span class="w">
+</span><span class="w"></span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l">Namespace</span><span class="w">
+</span><span class="w"></span><span class="nt">metadata</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">persistent-nginx</span><span class="w">
+</span><span class="w"></span><span class="nn">---</span><span class="w">
+</span><span class="w"></span><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l">v1</span><span class="w">
+</span><span class="w"></span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l">PersistentVolumeClaim</span><span class="w">
+</span><span class="w"></span><span class="nt">metadata</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">test-pv-claim</span><span class="w">
+</span><span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l">persistent-nginx</span><span class="w">
+</span><span class="w"></span><span class="nt">spec</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="nt">storageClassName</span><span class="p">:</span><span class="w"> </span><span class="l">rook-cephfs</span><span class="w">
+</span><span class="w">  </span><span class="nt">volumeMode</span><span class="p">:</span><span class="w"> </span><span class="l">Filesystem</span><span class="w">
+</span><span class="w">  </span><span class="nt">accessModes</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span>- <span class="l">ReadWriteOnce</span><span class="w">
+</span><span class="w">  </span><span class="nt">resources</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">requests</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span><span class="nt">storage</span><span class="p">:</span><span class="w"> </span><span class="l">5Gi</span><span class="w">
+</span><span class="w"></span><span class="nn">---</span><span class="w">
+</span><span class="w"></span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l">Deployment</span><span class="w">
+</span><span class="w"></span><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l">apps/v1</span><span class="w">
+</span><span class="w"></span><span class="nt">metadata</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">nginx</span><span class="w">
+</span><span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l">persistent-nginx</span><span class="w">
+</span><span class="w">  </span><span class="nt">labels</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l">nginx</span><span class="w">
+</span><span class="w"></span><span class="nt">spec</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="nt">replicas</span><span class="p">:</span><span class="w"> </span><span class="m">1</span><span class="w">
+</span><span class="w">  </span><span class="nt">selector</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">matchLabels</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span><span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l">nginx</span><span class="w">
+</span><span class="w">  </span><span class="nt">template</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">metadata</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span><span class="nt">labels</span><span class="p">:</span><span class="w">
+</span><span class="w">        </span><span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l">nginx</span><span class="w">
+</span><span class="w">    </span><span class="nt">spec</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span><span class="nt">volumes</span><span class="p">:</span><span class="w">
+</span><span class="w">        </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">test-pv-storage</span><span class="w">
+</span><span class="w">          </span><span class="nt">persistentVolumeClaim</span><span class="p">:</span><span class="w">
+</span><span class="w">            </span><span class="nt">claimName</span><span class="p">:</span><span class="w"> </span><span class="l">test-pv-claim</span><span class="w">
+</span><span class="w">      </span><span class="nt">containers</span><span class="p">:</span><span class="w">
+</span><span class="w">        </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">nginx</span><span class="w">
+</span><span class="w">          </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">nginx</span><span class="w">
+</span><span class="w">          </span><span class="nt">ports</span><span class="p">:</span><span class="w">
+</span><span class="w">            </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">web</span><span class="w">
+</span><span class="w">              </span><span class="nt">containerPort</span><span class="p">:</span><span class="w"> </span><span class="m">80</span><span class="w">
+</span><span class="w">          </span><span class="nt">volumeMounts</span><span class="p">:</span><span class="w">
+</span><span class="w">            </span>- <span class="nt">mountPath</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;/usr/share/nginx/html&#34;</span><span class="w">
+</span><span class="w">              </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">test-pv-storage</span><span class="w">
+</span><span class="w"></span><span class="nn">---</span><span class="w">
+</span><span class="w"></span><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l">v1</span><span class="w">
+</span><span class="w"></span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l">Service</span><span class="w">
+</span><span class="w"></span><span class="nt">metadata</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">nginx</span><span class="w">
+</span><span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l">persistent-nginx</span><span class="w">
+</span><span class="w"></span><span class="nt">spec</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="nt">ports</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span>- <span class="nt">protocol</span><span class="p">:</span><span class="w"> </span><span class="l">TCP</span><span class="w">
+</span><span class="w">      </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">web</span><span class="w">
+</span><span class="w">      </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="m">80</span><span class="w">
+</span><span class="w">  </span><span class="nt">selector</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l">nginx</span><span class="w">
+</span><span class="w"></span><span class="nn">---</span><span class="w">
+</span><span class="w"></span><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l">traefik.containo.us/v1alpha1</span><span class="w">
+</span><span class="w"></span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l">IngressRoute</span><span class="w">
+</span><span class="w"></span><span class="nt">metadata</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">ingress-tls</span><span class="w">
+</span><span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l">persistent-nginx</span><span class="w"> </span><span class="c"># Must be the same as the service</span><span class="w">
+</span><span class="w"></span><span class="nt">spec</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="nt">entryPoints</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span>- <span class="l">websecure</span><span class="w">
+</span><span class="w">  </span><span class="nt">routes</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span>- <span class="nt">match</span><span class="p">:</span><span class="w"> </span><span class="l">Host(`persistent-nginx.scitizen.loc`)</span><span class="w">
+</span><span class="w">    </span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l">Rule</span><span class="w">
+</span><span class="w">    </span><span class="nt">services</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="c"># Beware: the service MUST be in the same namespace than the IngressRoute.</span><span class="w">
+</span><span class="w">    </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">nginx</span><span class="w">
+</span><span class="w">      </span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l">Service</span><span class="w">
+</span><span class="w">      </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="m">80</span><span class="w">
+</span><span class="w">  </span><span class="nt">tls</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">certResolver</span><span class="p">:</span><span class="w"> </span><span class="l">myresolver</span><span class="w">
+</span><span class="w"></span><span class="nn">---</span><span class="w">
+</span><span class="w"></span><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l">traefik.containo.us/v1alpha1</span><span class="w">
+</span><span class="w"></span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l">IngressRoute</span><span class="w">
+</span><span class="w"></span><span class="nt">metadata</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">ingress-notls</span><span class="w">
+</span><span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l">persistent-nginx</span><span class="w"> </span><span class="c"># Must be the same as the service</span><span class="w">
+</span><span class="w"></span><span class="nt">spec</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="nt">entryPoints</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span>- <span class="l">web</span><span class="w">
+</span><span class="w">  </span><span class="nt">routes</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span>- <span class="nt">match</span><span class="p">:</span><span class="w"> </span><span class="l">Host(`persistent-nginx.scitizen.loc`)</span><span class="w">
+</span><span class="w">    </span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l">Rule</span><span class="w">
+</span><span class="w">    </span><span class="nt">services</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="c"># Beware: the service MUST be in the same namespace than the IngressRoute.</span><span class="w">
+</span><span class="w">    </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">nginx</span><span class="w">
+</span><span class="w">      </span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l">Service</span><span class="w">
+</span><span class="w">      </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="m">80</span><span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div></section>
+<!-- End include code file `./kubernetes/rook/xx-PersistentNginx.yaml` with lang `yaml` & label `./kubernetes/rook/xx-PersistentNginx.yaml` -->
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh">kubectl apply -f ./kubernetes/rook/xx-PersistentNginx.yaml
+kubectl -n persistent-nginx get pvc -w
+kubectl -n persistent-nginx <span class="nb">exec</span> -it deploy/nginx -- bash -c <span class="s1">&#39;echo &#34;Hello world !&#34; | tee /usr/share/nginx/html/index.html&#39;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Going to <a href="http://persistent-nginx.%7B%7Bcluster.baseHostName%7D%7D/index.html">http://persistent-nginx.{{cluster.baseHostName}}/index.html</a> should display <code>Hello world !</code>. And if you kill and restart your container, your data will be kept ;).</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh">kubectl -n persistent-nginx <span class="nb">exec</span> -it deploy/nginx -- /bin/sh -c <span class="s2">&#34;kill 1&#34;</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="dashboard">Dashboard</h3>
+<p>If you&rsquo;re planning to expose the dashboard from outside of the cluster, you have to disable <code>spec.dashboard.ssl</code> to false, since <em>traefik</em> will do the SSL encription. Then, deploy the routing:</p>
+
+
+
+
+
+
+
+
+
+
+
+<!-- Include code file `./kubernetes/rook/dashboard-ingress.yaml` with lang `yaml` & label `./kubernetes/rook/dashboard-ingress.yaml` -->
+<section class="included-file" data-file="./kubernetes/rook/dashboard-ingress.yaml"><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-yaml:./kubernetes/rook/dashboard-ingress.yaml" data-lang="yaml:./kubernetes/rook/dashboard-ingress.yaml"><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l">v1</span><span class="w">
+</span><span class="w"></span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l">Service</span><span class="w">
+</span><span class="w"></span><span class="nt">metadata</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">rook-ceph-mgr-dashboard</span><span class="w">
+</span><span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l">rook-ceph</span><span class="w"> </span><span class="c"># namespace:cluster</span><span class="w">
+</span><span class="w">  </span><span class="nt">labels</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l">rook-ceph-mgr</span><span class="w">
+</span><span class="w">    </span><span class="nt">rook_cluster</span><span class="p">:</span><span class="w"> </span><span class="l">rook-ceph</span><span class="w"> </span><span class="c"># namespace:cluster</span><span class="w">
+</span><span class="w"></span><span class="nt">spec</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="nt">ports</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">dashboard</span><span class="w">
+</span><span class="w">    </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="m">8443</span><span class="w">
+</span><span class="w">    </span><span class="nt">protocol</span><span class="p">:</span><span class="w"> </span><span class="l">TCP</span><span class="w">
+</span><span class="w">    </span><span class="nt">targetPort</span><span class="p">:</span><span class="w"> </span><span class="m">8443</span><span class="w">
+</span><span class="w">  </span><span class="nt">selector</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l">rook-ceph-mgr</span><span class="w">
+</span><span class="w">    </span><span class="nt">rook_cluster</span><span class="p">:</span><span class="w"> </span><span class="l">rook-ceph</span><span class="w">
+</span><span class="w">
+</span><span class="w"></span><span class="nn">---</span><span class="w">
+</span><span class="w">
+</span><span class="w"></span><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l">traefik.containo.us/v1alpha1</span><span class="w">
+</span><span class="w"></span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l">IngressRoute</span><span class="w">
+</span><span class="w"></span><span class="nt">metadata</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">ingress-dashboard-tls</span><span class="w">
+</span><span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l">rook-ceph</span><span class="w"> </span><span class="c"># Must be the same as the service</span><span class="w">
+</span><span class="w"></span><span class="nt">spec</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="nt">entryPoints</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span>- <span class="l">websecure</span><span class="w">
+</span><span class="w">  </span><span class="nt">routes</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span>- <span class="nt">match</span><span class="p">:</span><span class="w"> </span><span class="l">Host(`ceph.{{cluster.baseHostName}}`)</span><span class="w">
+</span><span class="w">    </span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l">Rule</span><span class="w">
+</span><span class="w">    </span><span class="nt">services</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="c"># Beware: the service MUST be in the same namespace than the IngressRoute.</span><span class="w">
+</span><span class="w">    </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">rook-ceph-mgr-dashboard</span><span class="w">
+</span><span class="w">      </span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l">Service</span><span class="w">
+</span><span class="w">      </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="m">8443</span><span class="w">
+</span><span class="w">  </span><span class="nt">tls</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">certResolver</span><span class="p">:</span><span class="w"> </span><span class="l">myresolver</span><span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div></section>
+<!-- End include code file `./kubernetes/rook/dashboard-ingress.yaml` with lang `yaml` & label `./kubernetes/rook/dashboard-ingress.yaml` -->
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh">kubectl apply -f ./kubernetes/rook/dashboard-ingress.yaml
+</code></pre></td></tr></table>
+</div>
+</div><p>After this, you should be able to access to ceph dashboard via <a href="https://ceph.%7B%7Bcluster.baseHostName%7D%7D">https://ceph.{{cluster.baseHostName}}</a></p>
+<hr />
+<ul>
+<li>The default <strong>username</strong> is <code>admin</code>.</li>
+<li>The default <strong>password</strong> is stored in a secret. To get it, run:
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh">kubectl -n rook-ceph get secret rook-ceph-dashboard-password -o <span class="nv">jsonpath</span><span class="o">=</span><span class="s2">&#34;{[&#39;data&#39;][&#39;password&#39;]}&#34;</span> <span class="p">|</span> base64 --decode <span class="o">&amp;&amp;</span> <span class="nb">echo</span>
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+<!-- This monitor requires a single CRD from CoreOS prometheus
+
+```sh
+kubectl apply -f https://raw.githubusercontent.com/prometheus-operator/kube-prometheus/master/manifests/setup/prometheus-operator-0servicemonitorCustomResourceDefinition.yaml
+``` -->
+<p>Having problems ? 
+
+
+
+
+
+
+
+
+<!-- rook.io -->
+        
+            
+        
+    
+
+
+
+<a
+    href="https://rook.io/docs/rook/v1.5/ceph-toolbox.html"
+    
+     target="_blank" rel="noopener noreferrer"><i class="fas fa-book" title="See the docs"></i>&nbsp;RTFM</a></p>
+<p>If you made errors and want to purge rook-ceph, remove following patterns <strong>on each nodes</strong> running cephfs (usually, all the worker nodes):</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -1881,27 +2453,11 @@ kubectl apply -f dashboard-external-http.yaml
 <pre class="chroma"><code class="language-sh" data-lang="sh">rm -r /var/lib/rook
 rm -r /var/lib/kubelet/plugins/rook*
 rm -r /var/lib/kubelet/plugins_registry/rook*
-wipefs /dev/sdX <span class="c1"># Each of the used disks</span>
+wipefs --all --force /dev/sdX <span class="c1"># Each of the used disks</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>See <a href="https://github.com/rook/rook/issues/4553">https://github.com/rook/rook/issues/4553</a></p>
-<h2 id="declare-the-storage-class-and-the-provisionner">Declare the storage class and the provisionner</h2>
-<div class="expand">
-  <button type="button" class="expand__button" aria-label="Expand Button">
-    <span class="expand-icon expand-icon__right">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M9.29 15.88L13.17 12 9.29 8.12c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0l4.59 4.59c.39.39.39 1.02 0 1.41L10.7 17.3c-.39.39-1.02.39-1.41 0-.38-.39-.39-1.03 0-1.42z"/></svg>
-    </span>
-    References
-  </button>
-  <div class="expand__content">
-    <ul>
-<li><a href="https://kubernetes.io/docs/concepts/storage/persistent-volumes/">📖 Persistent Volume</a></li>
-<li><a href="https://kubernetes.io/docs/concepts/storage/dynamic-provisioning/">📖 Dynamic Volume Provisioning</a></li>
-<li><a href="https://kubernetes.io/docs/concepts/storage/storage-classes/">📖 Storage Classes</a></li>
-</ul>
-
-  </div>
-</div>
+<hr />
 <hr>
 
 <div class="notices success" data-title="All set !">
@@ -1911,17 +2467,21 @@ wipefs /dev/sdX <span class="c1"># Each of the used disks</span>
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-sh" data-lang="sh">git add .
-git commit -m <span class="s2">&#34;Make things persistent\n\nFollowing guide @ https://gerkindev.github.io/devblog/walkthroughs/kubernetes/05-storage/&#34;</span></code></pre></td></tr></table>
+git commit -m <span class="s2">&#34;Make things persistent
+</span><span class="s2">
+</span><span class="s2">Following guide @ https://gerkindev.github.io/devblog/walkthroughs/kubernetes/05-storage/&#34;</span></code></pre></td></tr></table>
 </div>
 </div>
 </div>
 
-      </article>
-      
-      
+    </article>
+    
+    
 <script defer src="https://gerkindev.github.io/devblog/js/clipboard.min.1626706afc88d95ebe1173b553ec732c6dc82a576989315fdf5e7779af738a44.js"></script>
 
 <script defer src="https://gerkindev.github.io/devblog/js/helper/prev.min.js"></script>
@@ -2034,7 +2594,7 @@ git commit -m <span class="s2">&#34;Make things persistent\n\nFollowing guide @ 
     
   });
 </script>
-      <script>
+    <script>
   'use strict';
   
   function wrap(el, wrapper) {
@@ -2107,35 +2667,7 @@ git commit -m <span class="s2">&#34;Make things persistent\n\nFollowing guide @ 
   }) : null;
   
 </script>
-      <div class="grow"></div>
-<nav class="pagination-single">
-  <div class="prev-next">
     
-      
-      <a href="https://gerkindev.github.io/devblog/walkthroughs/kubernetes/04-reverse-proxy/" class="pagination-single__left">      
-        <div class="pagination-single__icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M19 11H7.83l4.88-4.88c.39-.39.39-1.03 0-1.42-.39-.39-1.02-.39-1.41 0l-6.59 6.59c-.39.39-.39 1.02 0 1.41l6.59 6.59c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L7.83 13H19c.55 0 1-.45 1-1s-.45-1-1-1z"/></svg>
-        </div>
-        <div class="pagination-single__left-title">Make services reachable from the world</div>
-      </a>
-      
-      <div class="grow"></div>
-      
-        <a href="https://gerkindev.github.io/devblog/walkthroughs/kubernetes/06-monitoring/" class="pagination-single__right">
-          <div class="pagination-single__right-title">Monitoring: See what is going on</div>      
-            <div class="pagination-single__icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59c.39-.39.39-1.02 0-1.41l-6.58-6.6c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z"/></svg>
-            </div>
-        </a>
-      
-    
-  </div>
-  
-  
-    <span class="pagination-single__left-title center">In walkthrough <a href="https://gerkindev.github.io/devblog/walkthroughs/kubernetes/" class="pagination-single__left-title">Set up a bare-metal kubernetes cluster from scratch</a></span>
-  
-</nav>
-      
 <div class="donation">
   <div class="donation__message">
     Share on
@@ -2159,8 +2691,8 @@ git commit -m <span class="s2">&#34;Make things persistent\n\nFollowing guide @ 
   </div>
 </div>
 
-      
-      
+    
+    
 <div class="whoami__gutter"></div>
 <hr class="hr-slash whoami-hr"/>
 <section class="whoami">
@@ -2218,7 +2750,7 @@ git commit -m <span class="s2">&#34;Make things persistent\n\nFollowing guide @ 
 <hr class="hr-slash whoami-hr" />
 
 
-      <section class="related">
+    <section class="related">
     
     
     <h1 class="related__title">
@@ -2229,10 +2761,6 @@ git commit -m <span class="s2">&#34;Make things persistent\n\nFollowing guide @ 
       <hr class="hr-dots"/>
     </h1>
     <ul class="related-ul">
-        
-        <li>
-          <a href="https://gerkindev.github.io/devblog/walkthroughs/kubernetes/02-cluster/" class="related__link">Kickstart the cluster</a>
-        </li>
         
         <li>
           <a href="https://gerkindev.github.io/devblog/walkthroughs/kubernetes/07-authentication/" class="related__link">Setup cluster&#39;s authentication</a>
@@ -2247,13 +2775,45 @@ git commit -m <span class="s2">&#34;Make things persistent\n\nFollowing guide @ 
         </li>
         
         <li>
-          <a href="https://gerkindev.github.io/devblog/walkthroughs/kubernetes/03-router/" class="related__link">Setup the cluster&#39;s internal router</a>
+          <a href="https://gerkindev.github.io/devblog/walkthroughs/kubernetes/02-cluster/" class="related__link">Kickstart the cluster</a>
+        </li>
+        
+        <li>
+          <a href="https://gerkindev.github.io/devblog/walkthroughs/kubernetes/06-monitoring/" class="related__link">Monitoring: See what is going on</a>
         </li>
         
     </ul>
     
   </section>
+    <div class="grow"></div>
+<nav class="pagination-single">
+  <div class="prev-next">
+    
       
+      <a href="https://gerkindev.github.io/devblog/walkthroughs/kubernetes/04-reverse-proxy/" class="pagination-single__left">      
+        <div class="pagination-single__icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M19 11H7.83l4.88-4.88c.39-.39.39-1.03 0-1.42-.39-.39-1.02-.39-1.41 0l-6.59 6.59c-.39.39-.39 1.02 0 1.41l6.59 6.59c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L7.83 13H19c.55 0 1-.45 1-1s-.45-1-1-1z"/></svg>
+        </div>
+        <div class="pagination-single__left-title">Make services reachable from the world</div>
+      </a>
+      
+      <div class="grow"></div>
+      
+        <a href="https://gerkindev.github.io/devblog/walkthroughs/kubernetes/06-monitoring/" class="pagination-single__right">
+          <div class="pagination-single__right-title">Monitoring: See what is going on</div>      
+            <div class="pagination-single__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59c.39-.39.39-1.02 0-1.41l-6.58-6.6c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z"/></svg>
+            </div>
+        </a>
+      
+    
+  </div>
+  
+  
+    <span class="pagination-single__left-title center">In walkthrough <a href="https://gerkindev.github.io/devblog/walkthroughs/kubernetes/" class="pagination-single__left-title">Set up a bare-metal kubernetes cluster from scratch</a></span>
+  
+</nav>
+    
   
     <div id="utterances"></div>
 <noscript>Please enable JavaScript to view the <a href="https://github.com/utterance">comments powered by utterances.</a></noscript>
@@ -2311,7 +2871,7 @@ git commit -m <span class="s2">&#34;Make things persistent\n\nFollowing guide @ 
 
   
 
-      <div class="modal micromodal-slide" id="modal" aria-hidden="true">
+    <div class="modal micromodal-slide" id="modal" aria-hidden="true">
   <div class="modal__overlay" tabindex="-1" data-micromodal-close>
     <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-title">
       
@@ -2624,14 +3184,76 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 </script>
 
-      <div class="hide">
-        
-      </div>
+    <div class="hide">
+      
     </div>
-  </main>
+  </div>
+</main>
 
+
+<script>
   
   
+  
+
+  var enableToc = JSON.parse("true");
+  var toc = JSON.parse("null");
+  var tocPosition = JSON.parse("\"outer\"");
+  
+  var singleMainElem = document.querySelector('.single__main');
+  var singleSideElem = document.querySelector('.single__side');
+
+  enquire.register("screen and (max-width: 769px)", {
+    match: function () {
+      if ((enableToc || toc) && tocPosition !== "outer") {
+        if (singleMainElem && singleSideElem) {
+          singleMainElem.classList.remove('main-main');
+          singleMainElem.classList.add('main');
+          singleSideElem.classList.remove('main-side');
+          singleSideElem.classList.add('hide');
+        }
+      } else if (tocPosition === "outer") {
+        if (singleMainElem && !singleMainElem.classList.contains('main-main')) {
+          singleMainElem.classList.remove('main-main');
+          singleMainElem.classList.add('main');
+        }
+        if (singleSideElem && !singleSideElem.classList.contains('hide')) {
+          singleSideElem.classList.add('hide');
+        }
+      }
+    },
+    unmatch: function () {
+      if ((enableToc || toc) && tocPosition !== "outer") {
+        singleMainElem.classList.remove('main');
+        singleMainElem.classList.add('main-main');
+        singleSideElem.classList.remove('hide');
+        singleSideElem.classList.add('main-side');
+      } else if (tocPosition === "outer") {
+        if (singleMainElem && !singleMainElem.classList.contains('main-main')) {
+          singleMainElem.classList.remove('main-main');
+          singleMainElem.classList.add('main');
+        }
+        if (singleSideElem && !singleSideElem.classList.contains('hide')) {
+          singleSideElem.classList.add('hide');
+        }
+      }
+
+      var navCollapseBtn = document.querySelector('.navbar__burger');
+      var navCollapse = document.getElementsByClassName('navbarm__collapse')[0];
+      if (navCollapse) {
+        navCollapse.setAttribute('data-open', false);
+        navCollapse.style.maxHeight = 0;
+        navCollapseBtn.classList.remove('is-active');
+      }
+      document.getElementsByClassName('navbar__menu')[0].classList.remove('is-active');
+      document.getElementsByClassName('mobile-search')[0].classList.add('hide');
+    },
+    setup: function () { },
+    deferSetup: true,
+    destroy: function () { },
+  });
+</script>
+
 
 
 
@@ -3182,7 +3804,6 @@ document.addEventListener('DOMContentLoaded', function () {
 </footer>
         </div>
         
-    
 
 
 
@@ -3211,7 +3832,14 @@ document.addEventListener('DOMContentLoaded', function () {
           <div class="toc toc__outer " data-dir="ltr" data-folding="false" data-ani="true">
             <nav id="TableOfContents">
   <ul>
-    <li><a href="#declare-the-storage-class-and-the-provisionner">Declare the storage class and the provisionner</a></li>
+    <li><a href="#setup-cephfs">Setup CephFS</a>
+      <ul>
+        <li><a href="#check-prerequisites">Check prerequisites</a></li>
+        <li><a href="#configure-the-rook-cluster">Configure the rook cluster</a></li>
+        <li><a href="#create-a-test-pvc">Create a test PVC</a></li>
+        <li><a href="#dashboard">Dashboard</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
           </div>
@@ -3282,12 +3910,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 </script>
 
-
     </div>
     
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/findAndReplaceDOMText/0.4.6/findAndReplaceDOMText.min.js" integrity="sha512-KJxyO81TRgb6HTSjpLHhJgOJMCuBkQtmH/ODpfAcqSOpNX3nnU5Hefbb5MZ3SwaSlFwCn+mwdg1466XEVv4Rew==" crossorigin="anonymous"></script>
-    <script src="https://gerkindev.github.io/devblog/scripts/vars.min.dfe94640aa013d15440440a68bb40cc83b4e449ade113e6fe57c3de27bc9b7e8.js"></script>
-
 </body>
 </html>

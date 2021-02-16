@@ -25,7 +25,7 @@
         <link>https://gerkindev.github.io/devblog/walkthroughs/kubernetes/07-authentication/</link>
         <pubDate>Mon, 16 Nov 2020 02:35:47 +0100</pubDate>
         
-        <atom:modified>Mon, 01 Feb 2021 19:47:58 +0100</atom:modified>
+        <atom:modified>Tue, 16 Feb 2021 12:06:38 +0100</atom:modified>
         <guid>https://gerkindev.github.io/devblog/walkthroughs/kubernetes/07-authentication/</guid>
         <description>Here is a graph of the RBAC setup we are going to implement:
 1. Setup keycloak We&amp;rsquo;ll use keycloak to proxy our authentication for all monitors, using a single realm. You may use several realms in real-life situations. This is probably the tough part, and you may tweak heavily the following guide. Moreover, I may forgot to write some instructions, or somes are heavily linked to your very own setup.</description>
@@ -126,8 +126,9 @@ https://github.com/zufardhiyaulhaq/engineering-notes/blob/master/notes/kubernete
         
         <atom:modified>Mon, 01 Feb 2021 16:42:59 +0100</atom:modified>
         <guid>https://gerkindev.github.io/devblog/walkthroughs/kubernetes/09-safe-monitoring/</guid>
-        <description>Now that we have our authentication service up and running, we can protect our dashboards installed in the step  06 - Monitoring: See what is going on  using our Keycloak OpenID Connect provider. Here is a diagram on how authorization will be managed:
-Traefik dashboard Kibana Kube dashboard   References   https://itnext.io/protect-kubernetes-dashboard-with-openid-connect-104b9e75e39c    Again, we are going to set up a new instance of  louketo-proxy .</description>
+        <description>Now that we have our authentication service up and running, we can protect our dashboards installed in the step &amp;nbsp;06 - Monitoring: See what is going on using our Keycloak OpenID Connect provider. Here is a diagram on how authorization will be managed:
+Traefik dashboard Kibana Kube dashboard   References   https://itnext.io/protect-kubernetes-dashboard-with-openid-connect-104b9e75e39c    Again, we are going to set up a new instance of &amp;nbsp;louketo-proxy.
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74  apiVersion:apps/v1kind:Deploymentmetadata:name:gatekeepernamespace:kubernetes-dashboardlabels:app:kubernetes-dashboardcomponent:gatekeeperspec:replicas:1selector:matchLabels:app:kubernetes-dashboardcomponent:gatekeepertemplate:metadata:labels:app:kubernetes-dashboardcomponent:gatekeeperspec:containers:- name:keycloak-gatekeeperimage:&amp;#34;quay.</description>
         
         <dc:creator>GerkinDev</dc:creator>
         

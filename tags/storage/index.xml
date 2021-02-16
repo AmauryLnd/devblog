@@ -25,9 +25,9 @@
         <link>https://gerkindev.github.io/devblog/walkthroughs/kubernetes/05-storage/</link>
         <pubDate>Mon, 16 Nov 2020 02:35:47 +0100</pubDate>
         
-        <atom:modified>Mon, 01 Feb 2021 19:47:58 +0100</atom:modified>
+        <atom:modified>Tue, 16 Feb 2021 12:06:38 +0100</atom:modified>
         <guid>https://gerkindev.github.io/devblog/walkthroughs/kubernetes/05-storage/</guid>
-        <description>References   📖 persistent volume https://www.youtube.com/watch?v=0swOh5C3OVM    As you may know, docker (and thus, kubernetes) does not persist anything by default. That means that everytime you restart a pod (container), it is in the exact same state as it was at its first execution, except for the mount points. Those mount points are real hard drive directories injected into your pod. Some apps we&amp;rsquo;ll setup later will require to persist data, and, more generally, when you&amp;rsquo;ll run real applications on your own, they will probably use a database or something.</description>
+        <description>References   Persistent Volume Dynamic Volume Provisioning Storage Classes https://www.youtube.com/watch?v=0swOh5C3OVM    As you may know, docker (and thus, kubernetes) does not persist anything by default. That means that everytime you restart a pod (container), it is in the exact same state as it was at its first execution, except for the mount points. Those mount points are real hard drive directories injected into your pod. Some apps we&amp;rsquo;ll setup later will require to persist data, and, more generally, when you&amp;rsquo;ll run real applications on your own, they will probably use a database or something.</description>
         
         <dc:creator>GerkinDev</dc:creator>
         

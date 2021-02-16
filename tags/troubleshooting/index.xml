@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>Troubleshooting on GerkinDev Devblog</title>
+    <link>https://gerkindev.github.io/devblog/tags/troubleshooting/</link>
+    <description>Recent content in Troubleshooting on GerkinDev Devblog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>©{year}, All Rights Reserved</copyright>
+    <lastBuildDate>Tue, 02 Feb 2021 00:16:48 +0100</lastBuildDate>
+    
+        <atom:link href="https://gerkindev.github.io/devblog/tags/troubleshooting/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+
+      
+      <item>
+        <title>CentOS8 Firewalld Tips</title>
+        <link>https://gerkindev.github.io/devblog/blog/centos8-firewalld-tips/</link>
+        <pubDate>Tue, 02 Feb 2021 00:16:48 +0100</pubDate>
+        
+        <atom:modified>Tue, 16 Feb 2021 12:06:11 +0100</atom:modified>
+        <guid>https://gerkindev.github.io/devblog/blog/centos8-firewalld-tips/</guid>
+        <description>When configuring firewall rules to be as strict as required, you may have some troubles understanding why something you thought was allowed is, actually, not. And to track down this kind of issues, some logs might help. Here is a small copy-pasta to enable firewalld logging.
+Enable &amp;ldquo;Access Denied&amp;rdquo;   References   How to enable firewalld logging for denied packets on Linux    firewalld can log events to rsyslog, the events journal in most linux distribution.</description>
+        
+        <dc:creator>GerkinDev</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>Firewall</category>
+            
+          
+            
+              <category>Security</category>
+            
+          
+            
+              <category>Sysadmin</category>
+            
+          
+            
+              <category>Troubleshooting</category>
+            
+          
+        
+        
+          
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>
