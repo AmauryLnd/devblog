@@ -21,7 +21,7 @@ categories:
 image:
 ---
 
-In 2018, *:imp: Microsoft* released its new framework, *Blazor*, which tease MVVM capabilities through component-oriented *AJAX* or *WebAssembly* application builds. Near 4 years later with many improvements & versions, what is the current state of *Blazor*?
+In 2018, *:imp: Microsoft* released its new framework, *Blazor*, which teases MVVM capabilities through component-oriented *AJAX* or *WebAssembly* application builds. Near 4 years later with many improvements & versions, what is the current state of *Blazor*?
 
 In this article, I'll share with you my experiences with *Blazor WebAssembly*, the pros, the cons, the whatnot.
 
@@ -217,7 +217,7 @@ I'm aware that I'm testing way too many different things from this single test. 
 
 <!-- https://hacks.mozilla.org/2019/08/webassembly-interface-types/ -->
 
-Well.... *Microsoft* doesn't talk about *Blazor*'s performance as a selling point. And there's a reason: it's poor. Like, deceiving. But that's not *Blazor*'s only's fault.
+Well.... *Microsoft* doesn't talk about *Blazor*'s performance as a selling point. And there's a reason: it's poor. Like, deceiving. But that's not *Blazor*'s only fault.
 
 DOM manipulation takes an absurd amount of time: currently (as of 01/2022), *WASM* can't interact with the DOM directly. Thus, every attempt to manipulate it needs to go through the JSInterop to run a javascript call from Dotnet. And this is **painfully** slow. For an *MVVM* framework, being super slow to manipulate your page's elements is disqualifying.
 
@@ -252,7 +252,7 @@ But once compiled to *WASM*, performances are decent. Rendering speed is still l
 
 The dependency on the *AspNet* ecosystem is a pain point, but using *C#* can be interesting if you have your business logic already written in this language.
 
-Yet, I'm not sure that a strict language like *C#* is appropriate for front-end, since the UI usually need models transformations to view-models that might be tight to components, and *C#*'s structures declaration verbosity is more a constraint than an advantage in this perspective.
+Yet, I'm not sure that a strict language like *C#* is appropriate for front-end, since the UI usually need models transformations to view-models that might be tied to components, and *C#*'s structures declaration verbosity is more a constraint than an advantage in this perspective.
 
 I'm not opposed to use *Blazor* again (and I'll have to anyway since I already have a production-grade application with it), but on very specific occasions.
 
